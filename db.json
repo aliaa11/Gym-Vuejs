@@ -78,6 +78,12 @@
           "trainer": "Randy Rivera",
           "image": "/img/classes/classes-1.jpg",
           "id": "Running-Randy Rivera-1745095695173"
+        },
+        {
+          "className": "Weight Loss",
+          "trainer": "Ryan Scott",
+          "image": "/img/classes/classes-5.jpg",
+          "id": "Weight Loss-Ryan Scott-1738283051748"
         }
       ]
     },
@@ -737,6 +743,12 @@
       "name": "mostafa",
       "email": "mostafamokna78@gmail.com",
       "message": "got work"
+    },
+    {
+      "id": "7ad1",
+      "name": "mostafa",
+      "email": "mostafamokna78@gmail.com",
+      "message": "what a nice work"
     }
   ]
 }

@@ -4,6 +4,7 @@ export const useUserStore = defineStore('user', {
     state: () => ({
         userData: null,
         subscription: null,
+        messages: [],
         loading: false,
         error: null
     }),
@@ -25,6 +26,23 @@ export const useUserStore = defineStore('user', {
     },
 
     actions: {
+        async fetchMessages() {
+            this.loading = true;
+            try {
+                const res = await fetch('http://localhost:3000/messages');
+                const data = await res.json();
+                console.log("data", data);
+
+                const userEmail = this.userData.email;
+                this.messages = (data || []).filter(msg => msg.email === userEmail);
+
+                console.log("filtered messages", this.messages);
+            } catch (err) {
+                this.error = 'Failed to fetch messages.';
+            } finally {
+                this.loading = false;
+            }
+        },
         loadUserData() {
             try {
                 const userData = localStorage.getItem('user');

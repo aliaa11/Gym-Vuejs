@@ -91,9 +91,16 @@
           
           <div class="card-content">
             <p>You don't currently have an active subscription plan. Upgrade now to access premium features.</p>
-            
-            
           </div>
+        </div>
+        <div class="card">
+            <h2 class="card-title">Messages</h2>
+            <ul class="message-list">
+              <li v-for="msg in userStore.messages" :key="msg.id" class="message-item">
+                <strong>{{ msg.email}}</strong> <br />
+                <span class="message-content">{{ msg.message }}</span><br />
+              </li>
+            </ul>
         </div>
       </div>
     </div>
@@ -115,6 +122,7 @@ export default defineComponent({
     onMounted(() => {
       userStore.loadUserData();
       userStore.fetchSubscription();
+      userStore.fetchMessages();
     });
 
     const subscriptionStatus = computed(() => {
@@ -503,4 +511,17 @@ export default defineComponent({
     cursor: pointer;
     font-weight: 500;
   }
+  .message-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  
+  .message-item {
+    background: #f3f4f6;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
 </style>
