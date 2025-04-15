@@ -1,91 +1,99 @@
 <template>
-    <nav class="navbar">
-      <div class="container">
-        <div class="logo">
-          <img :src="logo" alt="Gutlin Logo">
-        </div>
-        
-        <ul class="nav-links">
-          <li><router-link to="/" exact-active-class="active">Home</router-link></li>
-          <li><router-link to="/about" active-class="active">About</router-link></li>
-          <li><router-link to="/services" active-class="active">Services</router-link></li>
-          <li><router-link to="/blog" active-class="active">Blog</router-link></li>
-          <li><router-link to="/contact" active-class="active">Contact</router-link></li>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+    <div class="container">
+      <router-link to="/" class="navbar-brand">
+        <img :src="logo" alt="Gutlin Logo" >
+      </router-link>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <router-link to="/" class="nav-link" active-class="active">Home</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/about" class="nav-link" active-class="active">About</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/services" class="nav-link" active-class="active">Services</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/blog" class="nav-link" active-class="active">Blog</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/contact" class="nav-link" active-class="active">Contact</router-link>
+          </li>
         </ul>
-        
-        <router-link to="/appointment" class="cta-button">
-          Book Appointment
+
+        <router-link to="/appointment" class="btn signup-btn ms-lg-3">
+          SignUp
         </router-link>
       </div>
-    </nav>
-  </template>
-  
-  <script>
-  export default {
-    props: {
-      logo: {
-        type: String,
-        required: true
-      }
+    </div>
+  </nav>
+</template>
+
+<script>
+export default {
+  props: {
+    logo: {
+      type: String,
+      required: true
     }
   }
-  </script>
-  
-  <style scoped>
-  .navbar {
-    background: #fff;
-    padding: 20px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+}
+</script>
+
+<style scoped>
+.navbar {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #ffffff !important;
+  transition: color 0.3s;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #f15d44 !important;
+}
+
+.signup-btn {
+  border-color: #f15d44;
+  padding: 10px 20px;
+  font-weight: 500;
+  color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+.signup-btn:hover {
+  background-color: #f15d44;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    padding-top: 20px;
   }
   
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  .nav-item {
+    margin-bottom: 10px;
   }
-  
-  .logo img {
-    height: 40px;
+  .signup-btn
+  {
+    border: saddlebrown solid 2px;
+    margin-top: 10px;
+    margin-left: 0 !important;
+    padding: 20px;
   }
-  
-  .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
+  .btn-success {
+    margin-top: 10px;
+    margin-left: 0 !important;
   }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  
-  .nav-links a.active,
-  .nav-links a:hover {
-    color: #4CAF50;
-  }
-  
-  .cta-button {
-    background: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.3s;
-  }
-  
-  .cta-button:hover {
-    background: #3e8e41;
-  }
-  </style>
+}
+</style>

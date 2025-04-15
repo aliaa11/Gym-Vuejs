@@ -1,6 +1,5 @@
 <template>
   <div class="home-page">
-    <Navbar :logo="homeData.header.logo || ''" />
     <HeroSection
       v-if="homeData.heroSection"
       :title="homeData.heroSection.title"
@@ -15,7 +14,6 @@
 <script>
 import Navbar from '@/components/Navbar.vue'
 import HeroSection from '@/components/HeroSection.vue'
-import axios from 'axios'
 
 export default {
   components: {
@@ -28,13 +26,18 @@ export default {
     }
   },
   async created() {
-    try {
-      const response = await axios.get('http://localhost:3000/homePage')
-      this.homeData = response.data
-      console.log('Data loaded:', this.homeData)
-    } catch (error) {
-      console.error("Error loading data:", error)
+  try {
+    const response = await fetch('http://localhost:3000/homePage');
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
+    
+    this.homeData = await response.json();
+    console.log('Data loaded:', this.homeData);
+  } catch (error) {
+    console.error("Error loading data:", error);
   }
+}
 }
 </script>

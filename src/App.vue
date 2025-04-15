@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar />
+    <Navbar :logo="'/img/logo.png'"/>
     <main class="content">
       <router-view />
     </main>
@@ -26,6 +26,5 @@ export default {
 
 .content {
   flex: 1;
-  padding-top: 60px;
 }
 </style>
