@@ -1,0 +1,17 @@
+{
+  "homePage": {
+    "header": {
+      "logo": "img/logo.png"
+    },
+    "heroSection": {
+      "title": "Gutlin",
+      "subtitle": "Closest Blog",
+      "backgroundImage": "img/hero-bg.jpg",
+      "features": [
+        {
+          "title": "BMI CALCULATOR",
+          "description": "Gutlin comes packed with the user-friendly BMI Calculator shortcode which lets"        }
+      ]
+    }
+  }
+}
