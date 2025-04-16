@@ -1,6 +1,5 @@
 <template>
   <section class="hero" :style="{ backgroundImage: `url(${backgroundImage})` }">
-    <div class="overlay"></div>
     <div class="container">      
       <div class="feature-card" v-if="featureTitle">
         <h6>{{ title }}</h6>
@@ -58,14 +57,6 @@ export default {
   margin-bottom:40px ;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-}
 
 .container {
   position: relative;

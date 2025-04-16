@@ -30,6 +30,34 @@
       v-if="homeData.trainers"
       :trainers="homeData.trainers"
     />
+    <TestimonialCarousel 
+      v-if="homeData.testimonial"
+      :testimonials="homeData.testimonial"
+    />
+    <GetTrainingToday 
+      v-if="homeData.getTrainingToday"
+      :title="homeData.getTrainingToday.title"
+      :subtitle="homeData.getTrainingToday.subtitle"
+      :description="homeData.getTrainingToday.description"
+      :buttonText="homeData.getTrainingToday.buttonText"
+      :backgroundImage="homeData.getTrainingToday.backgroundImage"
+      :personImage="homeData.getTrainingToday.personImage"
+      @contact-clicked="handleContact"
+    />
+    <MembershipPlans 
+      v-if="homeData.membershipPlans"
+      :plans="homeData.membershipPlans"
+      @plan-selected="handlePlanSelection"
+    />
+    <RegisterSection 
+      v-if="homeData.register"
+      :image="homeData.register.image"
+    />
+    <LatestBlog 
+  v-if="homeData.blog"
+  :blogPosts="homeData.blog.slice(0, 3)"
+/>
+<LastComponentinabout />
   </div>
 </template>
 
@@ -39,6 +67,12 @@ import VideoSection from '@/components/VideoSection.vue'
 import ServicesSection from '@/components/ServicesSection.vue'
 import TrainersGallery from '@/components/TrainersGallery.vue'
 import ClassesGallery from '@/components/ClassesGallery.vue'
+import TestimonialCarousel from '@/components/TestimonialCarousel.vue';
+import GetTrainingToday from '@/components/GetTrainingToday.vue'
+import MembershipPlans from '@/components/MembershipPlans.vue'
+import RegisterSection from '@/components/RegisterSection.vue'
+import LatestBlog from '@/components/LatestBlog.vue'
+import LastComponentinabout from '@/components/LastComponentinabout.vue'
 
 export default {
   components: {
@@ -46,7 +80,15 @@ export default {
     VideoSection,
     ServicesSection,
     TrainersGallery,
-    ClassesGallery
+    ClassesGallery,
+    TestimonialCarousel,
+    GetTrainingToday,
+    MembershipPlans,
+    RegisterSection,
+    LatestBlog,
+    LastComponentinabout
+
+
   },
   data() {
     return {
