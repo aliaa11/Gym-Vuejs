@@ -11,6 +11,10 @@
                 "description": "Gutlin comes packed with the user-friendly BMI Calculator alongside which lists."
             }]
         },
+        "BlogSection": {
+            "title": "BLOG",
+            "backgroundImage": "/img/hero-bg.jpg"
+        },
         "aboutUs": {
             "title": "STORY ABOUT US",
             "content": [
@@ -123,5 +127,64 @@
         "heading": "STORY ABOUT US",
         "description": "Lorem ipsum proin gravida nibh vel velit auctor aliquet...",
         "image": "img/hero-bg.jpg"
-    }
+    },
+    "blog": [{
+            "date": "February 17, 2019",
+            "title": "#Gym",
+            "content": "Russia's first male synchronised swimmer.",
+            "image": "/img/blog/blog-1.jpg"
+        },
+        {
+            "date": "February 17, 2019",
+            "title": "#Sport",
+            "content": "NYC measles vaccination order prevails in court.",
+            "image": "/img/blog/blog-2.jpg"
+
+        },
+        {
+            "date": "February 17, 2019",
+            "title": "#Body",
+            "content": "The Week in Pictures: April 11 - 18.",
+            "image": "/img/blog/blog-3.jpg"
+        },
+        {
+            "date": "February 17, 2019",
+            "title": "#Gym",
+            "content": "10 States At Risk of Rural Hospital Closures.",
+            "image": "/img/blog/blog-4.jpg"
+        },
+        {
+            "date": "February 17, 2019",
+            "title": "#Sport",
+            "content": "Diver who helped save Thai soccer team.",
+            "image": "/img/blog/blog-5.jpg"
+
+        },
+        {
+            "date": "February 17, 2019",
+            "title": "#Body",
+            "content": "Man gets life in prison for stabbing",
+            "image": "/img/blog/blog-6.jpg"
+        },
+        {
+            "date": "February 17, 2019",
+            "title": "#Gym",
+            "content": "Man who pretended to be faces new charges.",
+            "image": "/img/blog/blog-7.jpg"
+        },
+        {
+            "date": "February 17, 2019",
+            "title": "#Sport",
+            "content": "10 States At Risk of Rural Hospital Closures.",
+            "image": "/img/blog/blog-8.jpg"
+
+        },
+        {
+            "date": "February 17, 2019",
+            "title": "#Body",
+            "content": "Lenny Kravitz gives Arch Digest a look inside",
+            "image": "/img/blog/blog-9.jpg"
+        }
+
+    ]
 }
