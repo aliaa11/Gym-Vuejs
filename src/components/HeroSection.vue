@@ -55,6 +55,7 @@ export default {
   align-items: center;
   text-align: left;
   color: white;
+  margin-bottom:40px ;
 }
 
 .overlay {
