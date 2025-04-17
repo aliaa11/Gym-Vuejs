@@ -51,7 +51,7 @@
     },
     methods: {
       handleContactClick() {
-        this.$emit('contact-clicked');
+    this.$router.push({ name: 'contact' })
       }
     }
   }

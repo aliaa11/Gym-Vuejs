@@ -21,7 +21,7 @@
       v-if="homeData.services"
       :services="homeData.services"
     />
-  <ClassesGallery 
+    <ClassesGallery 
       v-if="homeData.classes"
       :classes="homeData.classes"
       :itemsPerPage="6"
@@ -54,20 +54,24 @@
       :image="homeData.register.image"
     />
     <LatestBlog 
-  v-if="homeData.blog"
-  :blogPosts="homeData.blog.slice(0, 3)"
-/>
-<LastComponentinabout />
+      v-if="homeData.blog"
+      :blogPosts="homeData.blog.slice(0, 3)"
+    />
+    <LastComponentinabout />
   </div>
 </template>
 
 <script>
+import { onMounted } from 'vue'
+import { useHomeStore } from '@/stores/home'
+import { storeToRefs } from 'pinia'
+
 import HeroSection from '@/components/HeroSection.vue'
 import VideoSection from '@/components/VideoSection.vue'
 import ServicesSection from '@/components/ServicesSection.vue'
 import TrainersGallery from '@/components/TrainersGallery.vue'
 import ClassesGallery from '@/components/ClassesGallery.vue'
-import TestimonialCarousel from '@/components/TestimonialCarousel.vue';
+import TestimonialCarousel from '@/components/TestimonialCarousel.vue'
 import GetTrainingToday from '@/components/GetTrainingToday.vue'
 import MembershipPlans from '@/components/MembershipPlans.vue'
 import RegisterSection from '@/components/RegisterSection.vue'
@@ -75,6 +79,7 @@ import LatestBlog from '@/components/LatestBlog.vue'
 import LastComponentinabout from '@/components/LastComponentinabout.vue'
 
 export default {
+  name: 'Home',
   components: {
     HeroSection,
     VideoSection,
@@ -88,22 +93,26 @@ export default {
     LatestBlog,
     LastComponentinabout
   },
-  data() {
-    return {
-      homeData: {}
+  setup() {
+    const homeStore = useHomeStore()
+    const { homeData } = storeToRefs(homeStore)
+
+    onMounted(() => {
+      homeStore.fetchHomeData()
+    })
+
+    const handleContact = () => {
+      console.log('Contact clicked!')
     }
-  },
-  async created() {
-    try {
-      const response = await fetch('http://localhost:3000/homePage');
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      
-      this.homeData = await response.json();
-    } catch (error) {
-      console.error("Error loading data:", error);
+
+    const handlePlanSelection = (plan) => {
+      console.log('Plan selected:', plan)
+    }
+
+    return {
+      homeData,
+      handleContact,
+      handlePlanSelection
     }
   }
 }

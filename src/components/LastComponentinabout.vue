@@ -8,7 +8,7 @@
             <div class="promo-tag">{{ promos.newMember.tag }}</div>
             <h2 class="promo-title">{{ promos.newMember.title }}</h2>
             <p class="promo-description">{{ promos.newMember.description }}</p>
-            <button class="promo-button" @click="handlePromoAction('newMember')">
+            <button class="promo-button" @click="goToSignUp">
               {{ promos.newMember.buttonText }}
             </button>
           </div>
@@ -20,7 +20,7 @@
             <div class="promo-tag">{{ promos.contact.tag }}</div>
             <h2 class="promo-title">{{ promos.contact.title }}</h2>
             <p class="promo-description">{{ promos.contact.description }}</p>
-            <button class="promo-button" @click="handlePromoAction('contact')">
+            <button class="promo-button" @click="goTocontact">
               {{ promos.contact.buttonText }}
             </button>
           </div>
@@ -55,10 +55,11 @@
       }
     },
     methods: {
-      handlePromoAction(type) {
-       
-        console.log(`${type} promo button clicked`);
-        
+      goTocontact() {
+        this.$router.push('/contact');
+      },
+      goToSignUp() {
+        this.$router.push('/signUp');
       }
     }
   }

@@ -5,7 +5,7 @@
         <h6>{{ title }}</h6>
         <h1 class="bmi-title">{{ featureTitle }}</h1>
         <p class="bmi-description">{{ featureDescription }}</p>
-        <router-link to="/bmi-calculator" class="read-more-link">
+        <router-link to="/about" class="read-more-link">
           Read More <i class="fas fa-arrow-right"></i>
         </router-link>
       </div>

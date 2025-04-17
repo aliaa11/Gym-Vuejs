@@ -1,31 +1,33 @@
 <template>
-    <RegisterSection 
-      v-if="homeData.register"
-      :image="homeData.register.image"
-    />
+  <RegisterSection 
+    v-if="homeData.register"
+    :image="homeData.register.image"
+  />
 </template>
+
 <script>
-import RegisterSection from '@/components/RegisterSection.vue';
+import RegisterSection from '@/components/RegisterSection.vue'
+import { useHomeStore } from '@/stores/home'
+import { onMounted } from 'vue'
+import { storeToRefs } from 'pinia'
+
 export default {
-    components: { RegisterSection },
-    data() {
-    return {
-      homeData: {}
-    }
+  components: {
+    RegisterSection
   },
-  async created() {
-    try {
-      const response = await fetch('http://localhost:3000/homePage');
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+  setup() {
+    const homeStore = useHomeStore()
+    const { homeData } = storeToRefs(homeStore)
+
+    onMounted(() => {
+      if (Object.keys(homeData.value).length === 0) {
+        homeStore.fetchHomeData()
       }
-      
-      this.homeData = await response.json();
-    } catch (error) {
-      console.error("Error loading data:", error);
+    })
+
+    return {
+      homeData
     }
   }
 }
 </script>
-    
