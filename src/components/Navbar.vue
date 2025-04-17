@@ -1,8 +1,8 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light  shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
     <div class="container">
       <router-link to="/" class="navbar-brand">
-        <img :src="logo" alt="Gutlin Logo" >
+        <img :src="logo" alt="Gutlin Logo">
       </router-link>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -31,21 +31,65 @@
           </li>
         </ul>
 
-        <router-link to="/signUp" class="btn signup-btn ms-lg-3">
-          SignUp
-        </router-link>
+        <div class="d-flex">
+          <button 
+            v-if="!authStore.isAuthenticated" 
+            @click="$router.push('/login')"
+            class="signup-btn btn btn-outline-light"
+          >
+            Login / Register
+          </button>
+          
+          <div v-else class="dropdown">
+            <button 
+              class="signup-btn btn btn-outline-light dropdown-toggle"
+              type="button"
+              id="userDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {{ authStore.user.firstName }}
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+              <li><button class="dropdown-item" @click="handleLogout">Logout</button></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
 </template>
 
 <script>
+import { useAuthStore } from '@/stores/auth'
+import { useRouter } from 'vue-router'
+import { onMounted } from 'vue'
 export default {
+  name: 'NavBar',
   props: {
     logo: {
       type: String,
       required: true
     }
+  },
+  setup() {
+    const authStore = useAuthStore()
+    const router = useRouter()
+
+    onMounted(() => {
+    const savedUser = localStorage.getItem('user')
+    if (savedUser) {
+      authStore.user = JSON.parse(savedUser)
+      authStore.isAuthenticated = true
+    }
+  })
+
+  const handleLogout = async () => {
+    await authStore.logout()
+    router.push('/login')
+  }
+
+  return { authStore, handleLogout }
   }
 }
 </script>

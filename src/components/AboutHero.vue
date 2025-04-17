@@ -145,8 +145,7 @@ import StoryAboutUs from './StoryAboutUs.vue';
     },
     methods: {
     handleContactClick() {
-      // Handle contact button click
-      this.$emit('contact-clicked');
+      this.$router.push('/contact');
     }
   }
   };

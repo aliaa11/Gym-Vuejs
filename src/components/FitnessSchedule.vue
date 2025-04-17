@@ -216,7 +216,7 @@ export default {
   color: white;
   text-align: center;
   transition: all 0.3s ease;
-  border: #ff6b6b 2px solid;
+  border: #e0e0e0 2px solid;
   background-color: rgb(129, 129, 129);
   cursor: pointer;
   font-size: 12px;
