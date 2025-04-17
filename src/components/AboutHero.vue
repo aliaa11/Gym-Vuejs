@@ -6,7 +6,7 @@
         <div class="text-center text-white mt-5">
           <h1 class="text-5xl font-bold mb-4">{{ title }}</h1>
           <p>
-            <router-link to="/" style="text-decoration: none; color:white">Home</router-link> › About
+            <router-link to="/" style="text-decoration: none; color:white;font-weight:bold;">Home</router-link> › About
           </p>
         </div>
       </div>

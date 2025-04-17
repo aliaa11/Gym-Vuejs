@@ -278,5 +278,30 @@
             "image": "/img/blog/blog-9.jpg"
         }
 
+    ],
+    "Schedule": [
+        { "day": "TUESDAY", "startTime": "10.00", "endTime": "11.00", "type": "GYM", "trainer": "John Smith", "timeSlot": "10.00" },
+        { "day": "THURSDAY", "startTime": "10.00", "endTime": "12.00", "type": "YOGA", "trainer": "John Smith", "timeSlot": "10.00" },
+        { "day": "FRIDAY", "startTime": "10.00", "endTime": "12.00", "type": "BODY", "trainer": "John Smith", "timeSlot": "10.00" },
+        { "day": "SUNDAY", "startTime": "10.00", "endTime": "11.00", "type": "CARDIO", "trainer": "John Smith", "timeSlot": "10.00" },
+
+        { "day": "WEDNESDAY", "startTime": "14.00", "endTime": "16.00", "type": "RUNNING", "trainer": "John Smith", "timeSlot": "14.00" },
+        { "day": "THURSDAY", "startTime": "14.00", "endTime": "15.00", "type": "BOX", "trainer": "John Smith", "timeSlot": "14.00" },
+        { "day": "SATURDAY", "startTime": "14.00", "endTime": "16.00", "type": "GYM", "trainer": "John Smith", "timeSlot": "14.00" },
+
+        { "day": "MONDAY", "startTime": "16.00", "endTime": "18.00", "type": "CARDIO", "trainer": "John Smith", "timeSlot": "16.00" },
+        { "day": "THURSDAY", "startTime": "16.00", "endTime": "19.00", "type": "GYM", "trainer": "John Smith", "timeSlot": "16.00" },
+        { "day": "FRIDAY", "startTime": "16.00", "endTime": "18.00", "type": "YOGA", "trainer": "John Smith", "timeSlot": "16.00" },
+        { "day": "SUNDAY", "startTime": "16.00", "endTime": "20.00", "type": "GYM", "trainer": "John Smith", "timeSlot": "16.00" },
+
+        { "day": "MONDAY", "startTime": "18.00", "endTime": "22.00", "type": "BOX", "trainer": "John Smith", "timeSlot": "18.00" },
+        { "day": "WEDNESDAY", "startTime": "18.00", "endTime": "20.00", "type": "BODY", "trainer": "John Smith", "timeSlot": "18.00" },
+        { "day": "THURSDAY", "startTime": "18.00", "endTime": "21.00", "type": "CROSSFIT", "trainer": "John Smith", "timeSlot": "18.00" },
+        { "day": "SATURDAY", "startTime": "18.00", "endTime": "22.00", "type": "CARDIO", "trainer": "John Smith", "timeSlot": "18.00" },
+
+        { "day": "WEDNESDAY", "startTime": "20.00", "endTime": "22.00", "type": "GYM", "trainer": "John Smith", "timeSlot": "20.00" },
+        { "day": "THURSDAY", "startTime": "20.00", "endTime": "21.00", "type": "BODY", "trainer": "John Smith", "timeSlot": "20.00" },
+        { "day": "FRIDAY", "startTime": "20.00", "endTime": "22.00", "type": "CARDIO", "trainer": "John Smith", "timeSlot": "20.00" },
+        { "day": "SUNDAY", "startTime": "20.00", "endTime": "21.00", "type": "CROSSFIT", "trainer": "John Smith", "timeSlot": "20.00" }
     ]
 }

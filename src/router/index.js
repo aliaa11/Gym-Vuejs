@@ -3,6 +3,7 @@ import Home from '@/pages/Home.vue'
 import About from '@/pages/About.vue'
 import Blog from '@/pages/Blog.vue'
 import Register from '@/pages/Register.vue'
+import Class from '@/pages/class.vue'
 const routes = [{
         path: '/',
         name: 'Home',
@@ -19,11 +20,14 @@ const routes = [{
         component: Blog
     },
     {
-            path:'/signUp',
-            name:'signUp',
-            component:Register
+        path:'/signUp',
+        name:'Register',
+        component:Register
+    },
+    {
+        path:'/classes',
+        component:Class
     }
-
 
 ]
 

@@ -87,8 +87,6 @@ export default {
     RegisterSection,
     LatestBlog,
     LastComponentinabout
-
-
   },
   data() {
     return {
