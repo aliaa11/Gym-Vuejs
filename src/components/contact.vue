@@ -6,7 +6,7 @@
         <div class="breadcrumb-text">
           <h2>CONTACT</h2>
           <div class="breadcrumb-option">
-            <a href="#"><i class="fa fa-home"></i> Home</a>
+            
             <span>Contact</span>
           </div>
         </div>

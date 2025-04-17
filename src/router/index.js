@@ -4,7 +4,9 @@ import About from '@/pages/About.vue'
 import Blog from '@/pages/Blog.vue'
 import Register from '@/pages/Register.vue'
 import Class from '@/pages/class.vue'
-import Contact from '@/components/contact.vue'
+import contact from '@/components/contact.vue'
+import gallery from '@/components/gallery.vue'
+
 const routes = [{
         path: '/',
         name: 'Home',
@@ -32,8 +34,14 @@ const routes = [{
     ,
     {
         path:'/contact',
-        name:'Contact',
-        component: Contact
+        name:'contact',
+        component: contact
+    },
+    
+    {
+        path:'/gallery',
+        name:'gallery',
+        component:gallery
     }
 
 ]

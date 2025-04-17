@@ -303,5 +303,58 @@
         { "day": "THURSDAY", "startTime": "20.00", "endTime": "21.00", "type": "BODY", "trainer": "John Smith", "timeSlot": "20.00" },
         { "day": "FRIDAY", "startTime": "20.00", "endTime": "22.00", "type": "CARDIO", "trainer": "John Smith", "timeSlot": "20.00" },
         { "day": "SUNDAY", "startTime": "20.00", "endTime": "21.00", "type": "CROSSFIT", "trainer": "John Smith", "timeSlot": "20.00" }
-    ]
+    ],
+    
+        "gallery": [
+          {
+            "id": 1,
+            "src": "https://themewagon.github.io/gutim/img/gallery/gallery-1.jpg",
+            "alt": "Woman lifting dumbbell",
+            "categories": ["all", "fitness"],
+            "size": "large"
+          },
+          {
+            "id": 2,
+            "src": "https://themewagon.github.io/gutim/img/gallery/gallery-2.jpg",
+            "alt": "Person climbing stairs",
+            "categories": ["all", "fitness", "coaching"],
+            "size": "medium"
+          },
+          {
+            "id": 3,
+            "src": "https://themewagon.github.io/gutim/img/gallery/gallery-3.jpg",
+            "alt": "Green weight plate",
+            "categories": ["all", "fitness"],
+            "size": "small"
+          },
+          {
+            "id": 4,
+            "src": "https://themewagon.github.io/gutim/img/gallery/gallery-4.jpg",
+            "alt": "Person deadlifting",
+            "categories": ["all", "coaching"],
+            "size": "small"
+          },
+          {
+            "id": 5,
+            "src": "https://themewagon.github.io/gutim/img/gallery/gallery-5.jpg",
+            "alt": "Woman stretching",
+            "categories": ["all", "fitness"],
+            "size": "medium"
+          },
+          {
+            "id": 6,
+            "src": "https://themewagon.github.io/gutim/img/gallery/gallery-6.jpg",
+            "alt": "Woman with dumbbells",
+            "categories": ["all", "coaching"],
+            "size": "medium"
+          },
+          {
+            "id": 7,
+            "src": "https://themewagon.github.io/gutim/img/gallery/gallery-7.jpg",
+            "alt": "Person doing pull-ups",
+            "categories": ["all", "event"],
+            "size": "medium"
+          }
+        ]
+      
 }
