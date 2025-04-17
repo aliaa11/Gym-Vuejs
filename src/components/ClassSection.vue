@@ -11,7 +11,7 @@
       </div>
     </section>
    
-    <RegistrationForm/>
+    <!-- <RegistrationForm/> -->
     <ClassesGallery 
       v-if="homeData.classes"
       :classes="homeData.classes"
@@ -25,7 +25,6 @@
 import LastComponentinabout from './LastComponentinabout.vue';
 
 import FitnessSchedule from './FitnessSchedule.vue';
-import RegistrationForm from './RegistrationForm.vue';
 import ClassesGallery from './ClassesGallery.vue';
   
     
@@ -34,7 +33,6 @@ import ClassesGallery from './ClassesGallery.vue';
     components: {
       LastComponentinabout,
         FitnessSchedule,
-        RegistrationForm,
         ClassesGallery
     },
     props: {

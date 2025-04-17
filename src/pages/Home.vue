@@ -49,10 +49,10 @@
       :plans="homeData.membershipPlans"
       @plan-selected="handlePlanSelection"
     />
-    <RegisterSection 
+    <!-- <RegisterSection 
       v-if="homeData.register"
       :image="homeData.register.image"
-    />
+    /> -->
     <LatestBlog 
       v-if="homeData.blog"
       :blogPosts="homeData.blog.slice(0, 3)"
@@ -74,7 +74,6 @@ import ClassesGallery from '@/components/ClassesGallery.vue'
 import TestimonialCarousel from '@/components/TestimonialCarousel.vue'
 import GetTrainingToday from '@/components/GetTrainingToday.vue'
 import MembershipPlans from '@/components/MembershipPlans.vue'
-import RegisterSection from '@/components/RegisterSection.vue'
 import LatestBlog from '@/components/LatestBlog.vue'
 import LastComponentinabout from '@/components/LastComponentinabout.vue'
 
@@ -89,7 +88,6 @@ export default {
     TestimonialCarousel,
     GetTrainingToday,
     MembershipPlans,
-    RegisterSection,
     LatestBlog,
     LastComponentinabout
   },
