@@ -255,7 +255,6 @@ html, body {
   text-transform: uppercase;
 }
 
-/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12 {
     flex: 0 0 100%;

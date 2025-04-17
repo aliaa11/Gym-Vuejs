@@ -5,13 +5,18 @@
         <div class="text-center text-white mt-5">
             <h1 class="text-7xl font-bold mb-4" style="font-size: 82px;">Classes</h1>
           <p>
-            <router-link to="/" style="text-decoration: none; color:white">Home</router-link> › Classes
+            <router-link to="/" style="text-decoration: none; color:white;font-weight:bold;">Home</router-link> › Classes
           </p>
         </div>
       </div>
     </section>
    
     <RegistrationForm/>
+    <ClassesGallery 
+      v-if="homeData.classes"
+      :classes="homeData.classes"
+      :itemsPerPage="6"
+    />
     <FitnessSchedule/>
     <LastComponentinabout/>
   </template>
@@ -21,6 +26,7 @@ import LastComponentinabout from './LastComponentinabout.vue';
 
 import FitnessSchedule from './FitnessSchedule.vue';
 import RegistrationForm from './RegistrationForm.vue';
+import ClassesGallery from './ClassesGallery.vue';
   
     
   export default {
@@ -28,7 +34,8 @@ import RegistrationForm from './RegistrationForm.vue';
     components: {
       LastComponentinabout,
         FitnessSchedule,
-        RegistrationForm
+        RegistrationForm,
+        ClassesGallery
     },
     props: {
       title: {
@@ -39,7 +46,25 @@ import RegistrationForm from './RegistrationForm.vue';
         type: String,
         default: '/img/hero-bg.jpg'
       }
+    },
+    data() {
+    return {
+      homeData: {}
     }
+  },
+  async created() {
+    try {
+      const response = await fetch('http://localhost:3000/homePage');
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      this.homeData = await response.json();
+    } catch (error) {
+      console.error("Error loading data:", error);
+    }
+  }
   }
   </script>
   

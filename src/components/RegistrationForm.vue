@@ -54,7 +54,7 @@
       </div>
       
       <div class="registration-image">
-        <img src="/img/register-pic.jpg" alt="Fitness class" />
+        <img src="/img/register.jpg" alt="Fitness class" />
       </div>
     </div>
   </div>

@@ -31,7 +31,7 @@
           </li>
         </ul>
 
-        <router-link to="/appointment" class="btn signup-btn ms-lg-3">
+        <router-link to="/signUp" class="btn signup-btn ms-lg-3">
           SignUp
         </router-link>
       </div>

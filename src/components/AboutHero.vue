@@ -6,7 +6,7 @@
         <div class="text-center text-white mt-5">
           <h1 class="text-5xl font-bold mb-4">{{ title }}</h1>
           <p>
-            <router-link to="/" style="text-decoration: none; color:white">Home</router-link> › About
+            <router-link to="/" style="text-decoration: none; color:white;font-weight:bold;">Home</router-link> › About
           </p>
         </div>
       </div>
@@ -277,6 +277,15 @@ import StoryAboutUs from './StoryAboutUs.vue';
     background-position: center;
     color: white;
   }
+  .hero-section {
+    position: relative;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
   
   .overlay {
     position: absolute;
@@ -284,7 +293,7 @@ import StoryAboutUs from './StoryAboutUs.vue';
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.384);
   }
   
   .container {
@@ -333,9 +342,10 @@ import StoryAboutUs from './StoryAboutUs.vue';
   .hero-image img {
     max-height: 90%;
     max-width: 100%;
+    position: absolute;
     object-fit: contain;
+    bottom: 0;
   }
-  
   .contact-btn {
     background-color: #ff5e62;
     color: white;

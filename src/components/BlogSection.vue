@@ -15,7 +15,9 @@
   </template>
    
   <script>
-  import BlogComponent from '@/components/BlogComponent.vue'
+import BlogComponent from './BlogComponent.vue';
+
+  
     
   export default {
     name: 'BlogSection',

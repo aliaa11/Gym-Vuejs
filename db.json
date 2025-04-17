@@ -94,6 +94,21 @@
                 "className": "Karate",
                 "trainer": "Mike Johnson",
                 "image": "/img/classes/classes-3.jpg"
+            },
+            {
+                "className": "Karate",
+                "trainer": "Mike Johnson",
+                "image": "/img/classes/classes-3.jpg"
+            },
+            {
+                "className": "Dance",
+                "trainer": "Ryan Scott",
+                "image": "/img/classes/classes-2.jpg"
+            },
+            {
+                "className": "Weight Loss",
+                "trainer": "Cole Robertson",
+                "image": "/img/classes/classes-6.jpg"
             }
         ],
         "trainers": [{
@@ -117,6 +132,83 @@
                 "specialty": "CrossFit",
                 "image": "/img/trainer/trainer-2.jpg"
             }
+        ],
+            "testimonial": [{
+              "quote": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+              "name": "Patrick Cortez",
+              "title": "Leader",
+              "image": "/img/testimonial/testimonial-1.jpg"
+            },
+            {
+                "quote": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                "name": "Patrick Cortez",
+                "title": "Leader",
+                "image": "/img/testimonial/testimonial-1.jpg"
+            }],
+            "getTrainingToday": {
+                "title": "GET TRAINING TODAY",
+                "subtitle": "Simply dummy text of the printing and typesetting industry.",
+                "description": "Lorem Ipsum has been the industry's standard.",
+                "buttonText": "Contact Now",
+                "backgroundImage": "/img/banner-bg.jpg",
+                "personImage": "/img/banner-person.png"
+              },
+              "membershipPlans": [
+                {
+                  "name": "BASIC",
+                  "price": "17",
+                  "duration": "12 months",
+                  "trainer": "00 person",
+                  "people": "01 person",
+                  "visits": "Unlimited"
+                },
+                {
+                  "name": "STANDARD",
+                  "price": "57",
+                  "duration": "12 months",
+                  "trainer": "01 person",
+                  "people": "01 person",
+                  "visits": "Unlimited"
+                },
+                {
+                  "name": "PREMIUM",
+                  "price": "98",
+                  "duration": "12 months",
+                  "trainer": "01 person",
+                  "people": "01 person",
+                  "visits": "Unlimited"
+                }
+              ],
+              "register" :
+              {
+                "image":"/img/register.jpg"
+              },
+              "blog": [{
+                "date": "February 17, 2019",
+                "title": "#Gym",
+                "content": "Russia's first male synchronised swimmer.",
+                "image": "/img/blog/blog-1.jpg"
+            },
+            {
+                "date": "February 17, 2019",
+                "title": "#Sport",
+                "content": "NYC measles vaccination order prevails in court.",
+                "image": "/img/blog/blog-2.jpg"
+    
+            },
+            {
+                "date": "February 17, 2019",
+                "title": "#Body",
+                "content": "The Week in Pictures: April 11 - 18.",
+                "image": "/img/blog/blog-3.jpg"
+            },
+            {
+                "date": "February 17, 2019",
+                "title": "#Gym",
+                "content": "10 States At Risk of Rural Hospital Closures.",
+                "image": "/img/blog/blog-4.jpg"
+            }
+    
         ]
     },
     "heroSection": {
