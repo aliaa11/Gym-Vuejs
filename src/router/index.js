@@ -4,6 +4,7 @@ import About from '@/pages/About.vue'
 import Blog from '@/pages/Blog.vue'
 import Register from '@/pages/Register.vue'
 import Class from '@/pages/class.vue'
+import Contact from '@/components/contact.vue'
 const routes = [{
         path: '/',
         name: 'Home',
@@ -27,6 +28,12 @@ const routes = [{
     {
         path:'/classes',
         component:Class
+    }
+    ,
+    {
+        path:'/contact',
+        name:'Contact',
+        component: Contact
     }
 
 ]
