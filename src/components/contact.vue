@@ -6,7 +6,7 @@
         <div class="breadcrumb-text">
           <h2>CONTACT</h2>
           <div class="breadcrumb-option">
-            
+            <router-link to="/">Home/</router-link>
             <span>Contact</span>
           </div>
         </div>
