@@ -23,6 +23,7 @@
                   </div>
                   <ul class="plan-features text-center">
                     <li><br>Duration:<br> <span class="text-black fw-bold">{{ plan.duration }}</span></li>
+                    <li><br>Available Classes: <br> <span class="text-black fw-bold">{{ plan.classes }}</span></li>
                     <li>Number of visits: <br><span class="text-black fw-bold">{{ plan.visits }}</span></li>
                   </ul>
                 </div>

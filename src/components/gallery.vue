@@ -3,7 +3,7 @@
       <section class="gallery-header-section">
         <div class="container">
           <h2 class="gallery-title">GALLERY</h2>
-          <div class="breadcrumb"><a href="/">Home</a> » Gallery</div>
+          <div style=" text-decoration: none; color:white;"><a href="/" style=" text-decoration: none; color:white;font-weight:bold;">Home</a> > Gallery</div>
         </div>
       </section>
   
@@ -23,7 +23,7 @@
   
           <transition-group name="fade" tag="div" class="gallery-grid">
             <div
-              v-for="(image, index) in filteredImages"
+              v-for="(image) in filteredImages"
               :key="image.id"
               class="gallery-item"
               :class="image.size"
