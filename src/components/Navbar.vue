@@ -27,6 +27,9 @@
             <router-link to="/gallery" class="nav-link" active-class="active">Gallery</router-link>
           </li>
           <li class="nav-item">
+            <router-link to="/wishlist" class="nav-link" active-class="active">Wishlist</router-link>
+          </li>
+          <li class="nav-item">
             <router-link to="/contact" class="nav-link" active-class="active">Contact</router-link>
           </li>
         </ul>
@@ -51,8 +54,8 @@
               {{ authStore.user.firstName }}
             </button>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-              <li><button class="dropdown-item" @click="handleLogout">Logout</button></li>
               <li><router-link to="/profile" class="dropdown-item">Profile</router-link></li>
+              <li><button class="dropdown-item" @click="handleLogout">Logout</button></li>
             </ul>
           </div>
         </div>

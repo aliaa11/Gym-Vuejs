@@ -4,25 +4,25 @@
         <h2 class="section-title">UNLIMITED CLASSES</h2>
         
         <div class="gallery-grid">
-          <div 
-            class="class-card" 
-            v-for="(classItem, index) in paginatedClasses" 
-            :key="index"
-          >
-            <div class="class-image-container">
-              <img 
-                :src="classItem.image" 
-                :alt="classItem.className" 
-                class="class-image"
-              >
-              <div class="trainer-overlay">
-                <p class="trainer-name">{{ classItem.trainer }}</p>
-              </div>
+        <div 
+          class="class-card" 
+          v-for="(classItem, index) in paginatedClasses" 
+          :key="index"
+        >
+          <div class="class-image-container">
+            <img 
+              :src="classItem.image" 
+              :alt="classItem.className" 
+              class="class-image"
+            >
+            <WishlistButton :classItem="classItem" />
+            <div class="trainer-overlay">
+              <p class="trainer-name">{{ classItem.trainer }}</p>
             </div>
-            <h3 class="class-name">{{ classItem.className }}</h3>
           </div>
+          <h3 class="class-name">{{ classItem.className }}</h3>
         </div>
-  
+      </div>
         <div class="pagination" v-if="totalPages > 1">
           <button 
             @click="prevPage" 
@@ -49,8 +49,18 @@
   </template>
   
   <script>
-  export default {
-    name: 'ClassesGallery',
+  import { useAuthStore } from '@/stores/auth'
+import WishlistButton from '@/components/WishlistButton.vue'
+
+export default {
+  name: 'ClassesGallery',
+  components: {
+    WishlistButton
+  },
+  setup() {
+    const authStore = useAuthStore()
+    return { authStore }
+  },
     props: {
       classes: {
         type: Array,

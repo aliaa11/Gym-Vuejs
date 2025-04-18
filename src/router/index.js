@@ -10,6 +10,7 @@ import StripeCheckout from '@/components/StripeCheckout.vue'
 import PaymentSuccess from '@/components/PaymentSuccess.vue'
 import gallery from '@/components/gallery.vue'
 import UserProfile from '@/components/UserProfile.vue'
+import WishlistPage from '@/pages/WishlistPage.vue'
 
 const routes = [{
         path: '/',
@@ -67,6 +68,12 @@ const routes = [{
         name: 'profile',
         component: UserProfile
     }
+    ,
+    {
+        path: '/wishlist',
+        name: 'Wishlist',
+        component:WishlistPage
+      }
 ]
 
 const router = createRouter({
