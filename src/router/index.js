@@ -9,6 +9,7 @@ import contact from '@/components/contact.vue'
 import StripeCheckout from '@/components/StripeCheckout.vue'
 import PaymentSuccess from '@/components/PaymentSuccess.vue'
 import gallery from '@/components/gallery.vue'
+import UserProfile from '@/components/UserProfile.vue'
 
 const routes = [{
         path: '/',
@@ -57,9 +58,14 @@ const routes = [{
         props: true
     },
     {
-        path:'/gallery',
-        name:'Gallery',
-        component:gallery
+        path: '/gallery',
+        name: 'Gallery',
+        component: gallery
+    },
+    {
+        path: '/profile',
+        name: 'profile',
+        component: UserProfile
     }
 ]
 
