@@ -47,11 +47,6 @@
     background-color: #ffffff;
   }
   
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
   
   .services-content {
     display: flex;
@@ -61,7 +56,7 @@
   
   .services-image {
     flex: 1;
-    min-width: 300px;
+    min-width: 200px;
   }
   
   .feature-image {
@@ -117,17 +112,4 @@
     font-size: 1rem;
   }
   
-  @media (max-width: 768px) {
-    .services-content {
-      flex-direction: column;
-    }
-    
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .service-card {
-      padding: 30px 20px;
-    }
-  }
   </style>

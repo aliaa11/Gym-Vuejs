@@ -1,6 +1,6 @@
 <template>
     <footer class="site-footer">
-      <div class="footer-container">
+      <div class="footer-container container">
         <div class="footer-section">
           <h4>Contact Us</h4>
           <div class="contact-item">
@@ -64,8 +64,6 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
   }
   
   .footer-section {

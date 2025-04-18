@@ -52,6 +52,7 @@
             </button>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
               <li><button class="dropdown-item" @click="handleLogout">Logout</button></li>
+              <li><router-link to="/profile" class="dropdown-item">Profile</router-link></li>
             </ul>
           </div>
         </div>
