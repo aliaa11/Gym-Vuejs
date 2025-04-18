@@ -11,7 +11,6 @@
       </div>
     </section>
    
-    <!-- <RegistrationForm/> -->
     <ClassesGallery 
       v-if="homeData.classes"
       :classes="homeData.classes"

@@ -782,17 +782,6 @@
         "event"
       ],
       "size": "medium"
-    },
-    {
-      "id": 8,
-      "src": "https://themewagon.github.io/gutim/img/gallery/gallery-8.jpg",
-      "alt": "Tire flipping workout",
-      "categories": [
-        "all",
-        "event",
-        "fitness"
-      ],
-      "size": "large"
     }
   ],
   "messages": [
