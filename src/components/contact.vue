@@ -1,18 +1,17 @@
 <template>
   <div>
 
-    <section class="breadcrumb-section" >
+    <section class="hero" :style="{ backgroundImage: `url(${backgroundImage})` }">
+      <div class="overlay"></div>
       <div class="container">
-        <div class="breadcrumb-text">
-          <h2>CONTACT</h2>
-          <div class="breadcrumb-option">
-            <router-link to="/">Home</router-link>
-            <span>/ Contact</span>
-          </div>
+        <div class="text-center text-white mt-5">
+          <h1 class="text-5xl font-bold mb-4">CONTACT</h1>
+          <p>
+            <router-link to="/" style="text-decoration: none; color:white">Home</router-link> › Contact
+          </p>
         </div>
       </div>
     </section>
-
     
     <div class="map">
       <iframe
@@ -89,6 +88,12 @@ import axios from 'axios';
 
 export default {
   name: 'ContactPage',
+  props: {
+      backgroundImage: {
+        type: String,
+        default: '/img/hero-bg.jpg'
+      }
+    },
   data() {
     return {
       form: {
@@ -122,11 +127,6 @@ html, body {
   font-smoothing: antialiased;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
 
 .row {
   display: flex;
@@ -161,30 +161,33 @@ html, body {
 .text-red {
   color: #f44336;
 }
-
-.breadcrumb-section {
-  background-color: #333;
+.hero {
+  height: 60vh;
   background-size: cover;
   background-position: center;
-  padding: 60px 0 30px;
-  color: white;
-  text-align: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url("../assets/header.jpg");
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.breadcrumb-text h2 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 10px;
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.breadcrumb-option a, .breadcrumb-option span {
-  color: #bbb;
-  font-size: 14px;
-  text-decoration: none;
+.container {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
 .map {
   position: relative;
   height: 400px;

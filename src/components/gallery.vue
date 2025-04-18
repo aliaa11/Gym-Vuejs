@@ -1,11 +1,16 @@
 <template>
     <div>
-      <section class="gallery-header-section">
-        <div class="container">
-          <h2 class="gallery-title">GALLERY</h2>
-          <div style=" text-decoration: none; color:white;"><a href="/" style=" text-decoration: none; color:white;font-weight:bold;">Home</a> > Gallery</div>
+      <section class="hero" :style="{ backgroundImage: `url(${backgroundImage})` }">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="text-center text-white mt-5">
+          <h1 class="text-5xl font-bold mb-4">GALLERY</h1>
+          <p>
+            <router-link to="/" style="text-decoration: none; color:white">Home</router-link> › Gallery
+          </p>
         </div>
-      </section>
+      </div>
+    </section>
   
       <div class="gallery-section">
         <div class="container">
@@ -39,6 +44,12 @@
   <script>
   export default {
     name: "GallerySection",
+    props: {
+      backgroundImage: {
+        type: String,
+        default: '/img/hero-bg.jpg'
+      }
+    },
     data() {
       return {
         activeFilter: "all",
@@ -83,16 +94,35 @@
   </script>
   
   <style scoped>
-  .gallery-header-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("../assets/header.jpg");
-    background-size: cover;
-    background-position: center;
-    padding: 60px 0;
-    text-align: center;
-    color: white;
-    margin-bottom: 40px;
-  }
+
+  .hero {
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
   
   .gallery-title {
     font-size: 36px;
@@ -131,9 +161,10 @@
     font-weight: 600;
     text-transform: uppercase;
     margin: 0 15px;
-    padding: 5px 0;
+    padding: 10px;
     cursor: pointer;
     color: #777;
+    background-color: #e9e9e9;
     position: relative;
   }
   

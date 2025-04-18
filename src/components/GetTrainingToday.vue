@@ -2,8 +2,8 @@
     <section class="hero-section" :style="{ backgroundImage: `url(${backgroundImage})` }">
       <div class="overlay"></div>
       <div class="container">
-        <div class="hero-content">
-          <div class="hero-text ms-5">
+        <div class="hero-content row">
+          <div class="hero-text col-lg-8">
             <h1>{{ title }}</h1>
             <p>
               {{ subtitle }}
@@ -12,7 +12,7 @@
             </p>
             <button class="contact-btn" @click="handleContactClick">{{ buttonText }}</button>
           </div>
-          <div class="hero-image">
+          <div class="hero-image col-lg-4 d-none d-lg-flex">
             <img :src="personImage" alt="Fitness Trainer" />
           </div>
         </div>
@@ -151,7 +151,6 @@
       font-size: 2.8rem;
     }
   }
-  
   @media (max-width: 768px) {
     .hero-section {
       height: auto;
@@ -168,13 +167,9 @@
       padding-right: 0;
       margin-bottom: 30px;
     }
-    
-    .hero-image {
-      width: 100%;
-    }
-    
     .hero-text h1 {
       font-size: 2.5rem;
     }
   }
+  
   </style>

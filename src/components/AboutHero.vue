@@ -6,7 +6,7 @@
         <div class="text-center text-white mt-5">
           <h1 class="text-5xl font-bold mb-4">{{ title }}</h1>
           <p>
-            <router-link to="/" style="text-decoration: none; color:white;font-weight:bold;">Home</router-link> › About
+            <router-link to="/" style="text-decoration: none; color:white">Home</router-link> › About
           </p>
         </div>
       </div>
@@ -55,9 +55,9 @@
     </div>
     <section class="hero-section" :style="{ backgroundImage: `url(${backimage})` }">
         <div class="overlay"></div>
-        <div class="container">
+        <div class="container-hero">
           <div class="hero-content">
-            <div class="hero-text ms-5">
+            <div class="hero-text">
               <h1>GET TRAINING TODAY</h1>
               <p>
                 Gimply dummy text of the printing and typesetting industry.
@@ -65,7 +65,7 @@
               </p>
               <button class="contact-btn" @click="handleContactClick">Contact Now</button>
             </div>
-            <div class="hero-image">
+            <div class="hero-image d-none d-lg-flex">
               <img src="/img/banner-person.png" alt="Fitness Trainer" />
             </div>
           </div>
@@ -161,7 +161,7 @@ import StoryAboutUs from './StoryAboutUs.vue';
     align-items: center;
     justify-content: center;
   }
-  
+    
   .overlay {
     position: absolute;
     top: 0;
@@ -170,7 +170,7 @@ import StoryAboutUs from './StoryAboutUs.vue';
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
   }
-  
+    
   .container {
     position: relative;
     z-index: 1;
@@ -178,7 +178,6 @@ import StoryAboutUs from './StoryAboutUs.vue';
     max-width: 1200px;
     margin: 0 auto;
   }
-  
   /* Profile Section Styles */
   .profile-section {
     padding: 40px 0;
@@ -268,22 +267,13 @@ import StoryAboutUs from './StoryAboutUs.vue';
   }
   .hero-section {
     position: relative;
-    height: 100vh;
-    min-height: 600px;
-    width: 100%;
-
-    background-size: cover;
-    background-position: center;
-    color: white;
-  }
-  .hero-section {
-    position: relative;
     height: 600px;
     background-size: cover;
     background-position: center;
     color: white;
     display: flex;
     align-items: center;
+    margin-top: 40px;
   }
   
   .overlay {
@@ -295,7 +285,7 @@ import StoryAboutUs from './StoryAboutUs.vue';
     background-color: rgba(0, 0, 0, 0.384);
   }
   
-  .container {
+  .container-hero {
     position: relative;
     width: 100%;
     height: 100%;
@@ -345,19 +335,22 @@ import StoryAboutUs from './StoryAboutUs.vue';
     object-fit: contain;
     bottom: 0;
   }
+  
   .contact-btn {
-    background-color: #ff5e62;
+    background: linear-gradient(to right, #eb3c5a, #f67831);
     color: white;
     border: none;
     padding: 15px 30px;
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: 4px;
   }
   
   .contact-btn:hover {
-    background-color: #ff4146;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
   
   @media (max-width: 991px) {
@@ -367,10 +360,14 @@ import StoryAboutUs from './StoryAboutUs.vue';
   }
   
   @media (max-width: 768px) {
+    .hero-section {
+      height: auto;
+      padding: 80px 0;
+    }
+    
     .hero-content {
       flex-direction: column;
       text-align: center;
-      padding-top: 60px;
     }
     
     .hero-text {
@@ -386,5 +383,5 @@ import StoryAboutUs from './StoryAboutUs.vue';
     .hero-text h1 {
       font-size: 2.5rem;
     }
-}
+  }
   </style>

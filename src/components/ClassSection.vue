@@ -3,7 +3,7 @@
       <div class="overlay"></div>
       <div class="container">
         <div class="text-center text-white mt-5">
-            <h1 class="text-7xl font-bold mb-4" style="font-size: 82px;">Classes</h1>
+          <h1 class="text-5xl font-bold mb-4">Classes</h1>
           <p>
             <router-link to="/" style="text-decoration: none; color:white;font-weight:bold;">Home</router-link> › Classes
           </p>
