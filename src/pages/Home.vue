@@ -49,10 +49,6 @@
       :plans="homeData.membershipPlans"
       @plan-selected="handlePlanSelection"
     />
-    <!-- <RegisterSection 
-      v-if="homeData.register"
-      :image="homeData.register.image"
-    /> -->
     <LatestBlog 
       v-if="homeData.blog"
       :blogPosts="homeData.blog.slice(0, 3)"
