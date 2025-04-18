@@ -56,16 +56,6 @@ export default {
   color: white;
   margin-bottom:40px ;
 }
-
-
-.container {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  padding: 0 20px;
-}
-
-
 .feature-card h6
 {
   color: #f15d44;
