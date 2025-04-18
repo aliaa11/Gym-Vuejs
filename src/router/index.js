@@ -8,7 +8,7 @@ import Class from '@/pages/class.vue'
 import contact from '@/components/contact.vue'
 import StripeCheckout from '@/components/StripeCheckout.vue'
 import PaymentSuccess from '@/components/PaymentSuccess.vue'
-
+import gallery from '@/components/gallery.vue'
 
 const routes = [{
         path: '/',
@@ -55,6 +55,11 @@ const routes = [{
         name: 'PaymentSuccess',
         component: PaymentSuccess,
         props: true
+    },
+    {
+        path:'/gallery',
+        name:'Gallery',
+        component:gallery
     }
 ]
 
