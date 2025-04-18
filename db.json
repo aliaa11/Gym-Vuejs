@@ -737,21 +737,15 @@
       "id": 3,
       "src": "https://themewagon.github.io/gutim/img/gallery/gallery-3.jpg",
       "alt": "Green weight plate",
-      "categories": [
-        "all",
-        "fitness"
-      ],
-      "size": "small"
+      "categories": ["all", "fitness"],
+      "size": "medium"
     },
     {
       "id": 4,
       "src": "https://themewagon.github.io/gutim/img/gallery/gallery-4.jpg",
       "alt": "Person deadlifting",
-      "categories": [
-        "all",
-        "coaching"
-      ],
-      "size": "small"
+      "categories": ["all", "coaching"],
+      "size": "medium"
     },
     {
       "id": 5,

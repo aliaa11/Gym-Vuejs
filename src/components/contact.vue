@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <section class="breadcrumb-section">
+    <section class="breadcrumb-section" >
       <div class="container">
         <div class="breadcrumb-text">
           <h2>CONTACT</h2>
@@ -169,6 +169,8 @@ html, body {
   padding: 60px 0 30px;
   color: white;
   text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("../assets/header.jpg");
 }
 
 .breadcrumb-text h2 {

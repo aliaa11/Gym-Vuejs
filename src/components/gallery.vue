@@ -164,15 +164,15 @@
   }
   
   .large {
-    width: 50%;
-  }
+    width: 35%; 
+   }
   
   .medium {
-    width: 33.333%;
+    width: 25%;
   }
   
   .small {
-    width: 25%;
+    width: 15%;
   }
   
   @media (max-width: 991px) {
