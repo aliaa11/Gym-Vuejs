@@ -31,7 +31,7 @@
                   <button 
                   class="btn btn-start w-100" 
                   @click="selectPlan(plan)"
-                  :disabled="loadingPlan === plan.name || hasActiveSubscription(plan.name)"
+                  :disabled="hasActiveSubscription(plan.name)"
                 >
                   {{ loadingPlan === plan.name ? 'Processing...' : 'Start Now' }}
                 </button>
