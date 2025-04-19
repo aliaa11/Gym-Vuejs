@@ -29,12 +29,14 @@
                 </div>
                 <div class="plan-footer">
                   <button 
-                    class="btn btn-start w-100" 
-                    @click="selectPlan(plan)"
-                    :disabled="loadingPlan === plan.name"
-                  >
-                    {{ loadingPlan === plan.name ? 'Processing...' : 'Start Now' }}
-                  </button>
+                  class="btn btn-start w-100" 
+                  @click="selectPlan(plan)"
+                  :disabled="loadingPlan === plan.name || hasActiveSubscription(plan.name)"
+                >
+                  {{ loadingPlan === plan.name ? 'Processing...' : 'Start Now' }}
+                </button>
+                
+                
                 </div>
               </div>
             </div>
@@ -47,6 +49,8 @@
 
 <script>
 import StripeService from '@/services/StripeService';
+import { useUserStore } from '@/stores/userStore';
+import { mapState } from 'pinia';
 
 export default {
   name: 'MembershipPlans',
@@ -55,30 +59,38 @@ export default {
       loadingPlan: null
     };
   },
+  computed: {
+    ...mapState(useUserStore, ['user', 'subscription']),
+  },
+  created() {
+    // Fetch subscription from backend when component loads
+    const userStore = useUserStore();
+    userStore.fetchSubscription();
+  },
   props: {
     plans: {
       type: Array,
       default: () => [
         {
           name: 'BASIC',
-          price: '17',
-          duration: '12 months',
+          price: '20',
+          duration: '1 month',
           trainer: '00 person',
           people: '01 person',
           visits: 'Unlimited'
         },
         {
           name: 'STANDARD',
-          price: '57',
-          duration: '12 months',
+          price: '60',
+          duration: '1 month',
           trainer: '01 person',
           people: '01 person',
           visits: 'Unlimited'
         },
         {
           name: 'PREMIUM',
-          price: '98',
-          duration: '12 months',
+          price: '100',
+          duration: '1 month',
           trainer: '01 person',
           people: '01 person',
           visits: 'Unlimited'
@@ -87,35 +99,39 @@ export default {
     }
   },
   methods: {
+    hasActiveSubscription(planName) {
+      return (
+        this.subscription &&
+        this.subscription.planName === planName &&
+        this.subscription.status === 'active'
+      );
+    },
     async selectPlan(plan) {
       const user = JSON.parse(localStorage.getItem('user'));
       if (!user) {
-        alert('You must be logged in to purchase a plan.');
+        //alert('You must be logged in to purchase a plan.');
         this.$router.push({ name: 'Login' });
         return;
       }
 
       try {
         this.loadingPlan = plan.name;
-      
+
         this.$emit('plan-selected', plan);
-        
-        
+
         const sessionData = await StripeService.createCheckoutSession(plan);
-        
-        
+
         await StripeService.redirectToCheckout(sessionData);
-        
-       
+
         this.$router.push({
-        name: 'StripeCheckout',
-        params: {
-          sessionId: sessionData.sessionId,
-          planName: plan.name,
-          price: plan.price,
-          duration: plan.duration
-        }
-      });
+          name: 'StripeCheckout',
+          params: {
+            sessionId: sessionData.sessionId,
+            planName: plan.name,
+            price: plan.price,
+            duration: plan.duration
+          }
+        });
 
       } catch (error) {
         console.error('Error processing payment:', error);
@@ -125,8 +141,9 @@ export default {
       }
     }
   }
-}
+};
 </script>
+
 
 <style scoped>
 
