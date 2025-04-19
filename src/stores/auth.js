@@ -89,6 +89,81 @@ export const useAuthStore = defineStore('auth', {
                 console.error('Logout error:', err)
                 throw err
             }
+        },
+        async initializeUserData() {
+            if (this.user && !this.user.wishlist) {
+                this.user.wishlist = [];
+                await this.updateUserData(this.user);
+            }
+        },
+        async addToWishlist(classItem) {
+            if (!this.isAuthenticated) {
+                console.warn("User not authenticated - cannot add to wishlist");
+                return;
+            }
+            
+            try {
+                await this.initializeUserData();
+                
+                // Ensure classItem has an ID
+                if (!classItem.id) {
+                    classItem.id = `${classItem.className}-${classItem.trainer}-${Date.now()}`;
+                }
+                
+                // Check if already in wishlist
+                if (this.user.wishlist.some(item => 
+                    item.className === classItem.className && 
+                    item.trainer === classItem.trainer
+                )) {
+                    console.log("Class already in wishlist");
+                    return;
+                }
+                
+                // Add to wishlist
+                this.user.wishlist.push(classItem);
+                await this.updateUserData(this.user);
+                
+                return true;
+            } catch (error) {
+                console.error('Error adding to wishlist:', error);
+                throw error;
+            }
+        },
+
+        async removeFromWishlist(classId) {
+            if (!this.isAuthenticated) {
+                console.warn("User not authenticated - cannot remove from wishlist");
+                return;
+            }
+            
+            try {
+                await this.initializeUserData();
+                
+                this.user.wishlist = this.user.wishlist.filter(item => item.id !== classId);
+                await this.updateUserData(this.user);
+                
+                return true;
+            } catch (error) {
+                console.error('Error removing from wishlist:', error);
+                throw error;
+            }
+        },
+
+        async fetchUserData() {
+            const response = await fetch(`http://localhost:3000/users/${this.user.id}`);
+            if (!response.ok) throw new Error('Failed to fetch user data');
+            return await response.json();
+        },
+
+        async updateUserData(userData) {
+            const response = await fetch(`http://localhost:3000/users/${this.user.id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(userData)
+            });
+            if (!response.ok) throw new Error('Failed to update user data');
         }
     }
 })
