@@ -4,7 +4,7 @@
     class="wishlist-btn"
     :class="{ active: isInWishlist }"
   >
-  <i class="fa-solid fa-heart"></i>
+    <i class="fa-solid fa-heart"></i>
   </button>
 </template>
 
@@ -40,19 +40,18 @@ export default {
 
       try {
         if (isInWishlist.value) {
-          const itemToRemove = authStore.user.wishlist.find(item =>
+          const item = authStore.user.wishlist.find(item =>
             item.className === props.classItem.className &&
             item.trainer === props.classItem.trainer
           );
-
-          if (itemToRemove?.id) {
-            await authStore.removeFromWishlist(itemToRemove.id);
+          if (item?.id) {
+            await authStore.removeFromWishlist(item.id);
           }
         } else {
           await authStore.addToWishlist(props.classItem);
         }
-      } catch (error) {
-        console.error('Failed to toggle wishlist:', error);
+      } catch (err) {
+        console.error('Wishlist error:', err);
       }
     };
 
@@ -81,12 +80,11 @@ export default {
   transition: all 0.3s ease;
   color: rgb(219 167 167 / 80%);
 }
-.wishlist-btn:hover i{
+.wishlist-btn:hover i {
   color: #eb3c5a;
   transform: scale(1.1);
 }
-
-.wishlist-btn.active i{
+.wishlist-btn.active i {
   color: #eb3c5a;
 }
 </style>

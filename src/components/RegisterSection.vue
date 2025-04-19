@@ -5,7 +5,7 @@
         <div class="auth-form">
           <h2 class="auth-title">REGISTER NOW</h2>
           <p class="auth-subtitle">The First 7 Day Trial is Completely Free With The Teacher</p>
-          
+
           <form @submit.prevent="handleSubmit">
             <div class="form-grid">
               <div class="form-group">
@@ -19,7 +19,7 @@
                 >
                 <span class="error-message" v-if="fieldErrors.firstName">{{ fieldErrors.firstName }}</span>
               </div>
-              
+
               <div class="form-group">
                 <label for="lastName">Last Name</label>
                 <input 
@@ -31,7 +31,7 @@
                 >
                 <span class="error-message" v-if="fieldErrors.lastName">{{ fieldErrors.lastName }}</span>
               </div>
-              
+
               <div class="form-group">
                 <label for="email">Your email address</label>
                 <input 
@@ -43,7 +43,7 @@
                 >
                 <span class="error-message" v-if="fieldErrors.email">{{ fieldErrors.email }}</span>
               </div>
-              
+
               <div class="form-group">
                 <label for="mobile">Mobile No*</label>
                 <input 
@@ -80,7 +80,7 @@
                 <span class="error-message" v-if="fieldErrors.confirmPassword">{{ fieldErrors.confirmPassword }}</span>
               </div>
             </div>
-            
+
             <button class="auth-button" :disabled="loading">
               {{ loading ? 'Processing...' : 'Get Started' }}
             </button>
@@ -114,7 +114,6 @@ export default {
     const authStore = useAuthStore()
     const router = useRouter()
     const formSubmitted = ref(false)
-
     return { authStore, router, formSubmitted }
   },
   data() {
@@ -125,7 +124,8 @@ export default {
         email: '',
         mobile: '',
         password: '',
-        confirmPassword: ''
+        confirmPassword: '',
+        wishlist: [],
       },
       fieldErrors: {},
       loading: false,
@@ -138,18 +138,13 @@ export default {
   },
   methods: {
     async handleSubmit() {
-      this.formSubmitted = true
       this.clearErrors()
       this.loading = true
 
       try {
-        // Validate passwords match
-        if (this.formData.password !== this.formData.confirmPassword) {
-          this.fieldErrors.confirmPassword = 'Passwords do not match'
-          return
-        }
+        const { firstName, lastName, email, mobile, password, confirmPassword } = this.formData
 
-        // Check required fields
+       
         const requiredFields = ['firstName', 'lastName', 'email', 'mobile', 'password']
         requiredFields.forEach(field => {
           if (!this.formData[field]) {
@@ -157,30 +152,35 @@ export default {
           }
         })
 
-        // Check if any errors exist
-        if (Object.keys(this.fieldErrors).length > 0) {
-          return
+       
+        if (email && !/^\S+@\S+\.\S+$/.test(email)) {
+          this.fieldErrors.email = 'Enter a valid email address'
         }
 
-        // Prepare user data
-        const userData = {
-          firstName: this.formData.firstName,
-          lastName: this.formData.lastName,
-          email: this.formData.email,
-          mobile: this.formData.mobile,
-          password: this.formData.password
+        
+        if (password && !this.isStrongPassword(password)) {
+          this.fieldErrors.password =
+            'Password must be at least 8 characters, include uppercase, lowercase, number and special character'
         }
 
-        // Register user
+       
+        if (password !== confirmPassword) {
+          this.fieldErrors.confirmPassword = 'Passwords do not match'
+        }
+
+        
+        if (Object.keys(this.fieldErrors).length > 0) return
+
+        
+        const userData = { firstName, lastName, email, mobile, password }
         await this.authStore.register(userData)
+
         this.showAlert('Registration successful! Redirecting to login...', 'success')
         setTimeout(() => {
           this.router.push('/')
         }, 2000)
       } catch (error) {
-        // Safe error handling
         const errorMessage = error?.message || 'Registration failed. Please try again.'
-        
         if (errorMessage.includes('Email already registered')) {
           this.fieldErrors.email = errorMessage
         } else {
@@ -190,6 +190,10 @@ export default {
         this.loading = false
       }
     },
+    isStrongPassword(password) {
+      const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/
+      return regex.test(password)
+    },
     clearErrors() {
       this.fieldErrors = {}
     },
@@ -197,7 +201,6 @@ export default {
       this.alert.message = message
       this.alert.type = type
       this.alert.show = true
-      
       setTimeout(() => {
         this.alert.show = false
       }, 5000)
@@ -205,6 +208,7 @@ export default {
   }
 }
 </script>
+
 
 <style scoped>
 .auth-section {

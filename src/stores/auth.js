@@ -1,3 +1,4 @@
+// stores/auth.js
 import { defineStore } from 'pinia'
 
 export const useAuthStore = defineStore('auth', {
@@ -8,146 +9,63 @@ export const useAuthStore = defineStore('auth', {
 
     actions: {
         async register(userData) {
-            try {
-                const requiredFields = ['firstName', 'lastName', 'email', 'mobile', 'password']
-                const missingFields = requiredFields.filter(field => !userData[field])
+            const requiredFields = ['firstName', 'lastName', 'email', 'mobile', 'password'];
+            const missing = requiredFields.filter(field => !userData[field]);
 
-                if (missingFields.length > 0) {
-                    throw new Error(`Missing required fields: ${missingFields.join(', ')}`)
-                }
+            if (missing.length > 0) throw new Error(`Missing: ${missing.join(', ')}`);
 
-                const checkRes = await fetch(`http://localhost:3000/users?email=${userData.email}`)
-                if (!checkRes.ok) throw new Error('Failed to check existing users')
+            const checkRes = await fetch(`http://localhost:3000/users?email=${userData.email}`);
+            const existing = await checkRes.json();
+            if (existing.length > 0) throw new Error('Email already registered');
 
-                const existingUsers = await checkRes.json()
-                if (existingUsers.length > 0) {
-                    throw new Error('Email already registered')
-                }
+            // 👇 Ensure wishlist is initialized
+            const newUserPayload = {
+                ...userData,
+                wishlist: []
+            };
 
-                const res = await fetch('http://localhost:3000/users', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(userData)
-                })
+            const res = await fetch('http://localhost:3000/users', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(newUserPayload)
+            });
 
-                if (!res.ok) throw new Error('Registration failed')
+            if (!res.ok) throw new Error('Registration failed');
 
-                const newUser = await res.json()
-                this.user = newUser
-                this.isAuthenticated = true
-
-                localStorage.setItem('user', JSON.stringify(newUser))
-                localStorage.setItem('isAuthenticated', 'true')
-                return newUser
-            } catch (err) {
-                console.error('Registration error:', err)
-                throw err
-            }
+            const newUser = await res.json();
+            this.user = newUser;
+            this.isAuthenticated = true;
+            localStorage.setItem('user', JSON.stringify(newUser));
+            localStorage.setItem('isAuthenticated', 'true');
+            return newUser;
         },
 
-        async login(credentials) {
-            try {
-                if (!credentials.email) throw new Error('Email is required')
-                if (!credentials.password) throw new Error('Password is required')
+        async login({ email, password }) {
+            if (!email || !password) throw new Error('Missing credentials');
 
-                const res = await fetch(`http://localhost:3000/users?email=${credentials.email}`)
-                if (!res.ok) throw new Error('Login failed - server error')
+            const res = await fetch(`http://localhost:3000/users?email=${email}`);
+            const users = await res.json();
+            const user = users[0];
 
-                const users = await res.json()
-                if (users.length === 0) {
-                    throw new Error('Email not found')
-                }
+            if (!user) throw new Error('Email not found');
+            if (user.password !== password) throw new Error('Incorrect password');
 
-                const user = users[0]
-                if (user.password !== credentials.password) {
-                    throw new Error('Incorrect password')
-                }
+            this.user = user;
+            this.isAuthenticated = true;
+            localStorage.setItem('user', JSON.stringify(user));
+            localStorage.setItem('isAuthenticated', 'true');
 
-                this.user = user
-                this.isAuthenticated = true
+            return user;
 
-                localStorage.setItem('user', JSON.stringify(user))
-                localStorage.setItem('isAuthenticated', 'true')
-
-                return true
-            } catch (err) {
-                console.error('Login error:', err)
-                throw err
-            }
         },
 
-        async logout() {
-            try {
-                this.user = null
-                this.isAuthenticated = false
-
-                localStorage.removeItem('user')
-                localStorage.removeItem('isAuthenticated')
-
-                return true
-            } catch (err) {
-                console.error('Logout error:', err)
-                throw err
-            }
-        },
-        async initializeUserData() {
-            if (this.user && !this.user.wishlist) {
-                this.user.wishlist = [];
-                await this.updateUserData(this.user);
-            }
-        },
-        async addToWishlist(classItem) {
-            if (!this.isAuthenticated) {
-                console.warn("User not authenticated - cannot add to wishlist");
-                return;
-            }
-
-            try {
-                await this.initializeUserData();
-
-                // Ensure classItem has an ID
-                if (!classItem.id) {
-                    classItem.id = `${classItem.className}-${classItem.trainer}-${Date.now()}`;
-                }
-
-                // Check if already in wishlist
-                if (this.user.wishlist.some(item =>
-                        item.className === classItem.className &&
-                        item.trainer === classItem.trainer
-                    )) {
-                    console.log("Class already in wishlist");
-                    return;
-                }
-
-                // Add to wishlist
-                this.user.wishlist.push(classItem);
-                await this.updateUserData(this.user);
-
-                return true;
-            } catch (error) {
-                console.error('Error adding to wishlist:', error);
-                throw error;
-            }
+        logout() {
+            this.user = null;
+            this.isAuthenticated = false;
+            localStorage.removeItem('user');
+            localStorage.removeItem('isAuthenticated');
         },
 
-        async removeFromWishlist(classId) {
-            if (!this.isAuthenticated) {
-                console.warn("User not authenticated - cannot remove from wishlist");
-                return;
-            }
-
-            try {
-                await this.initializeUserData();
-
-                this.user.wishlist = this.user.wishlist.filter(item => item.id !== classId);
-                await this.updateUserData(this.user);
-
-                return true;
-            } catch (error) {
-                console.error('Error removing from wishlist:', error);
-                throw error;
-            }
-        },
         restoreSession() {
             const savedUser = localStorage.getItem('user');
             const isAuth = localStorage.getItem('isAuthenticated') === 'true';
@@ -156,21 +74,56 @@ export const useAuthStore = defineStore('auth', {
                 this.isAuthenticated = true;
             }
         },
+
         async fetchUserData() {
-            const response = await fetch(`http://localhost:3000/users/${this.user.id}`);
-            if (!response.ok) throw new Error('Failed to fetch user data');
-            return await response.json();
+            const res = await fetch(`http://localhost:3000/users/${this.user.id}`);
+            if (!res.ok) throw new Error('Failed to fetch user');
+            this.user = await res.json();
+            localStorage.setItem('user', JSON.stringify(this.user));
         },
 
-        async updateUserData(userData) {
-            const response = await fetch(`http://localhost:3000/users/${this.user.id}`, {
+        async updateUserData(newUserData) {
+            const res = await fetch(`http://localhost:3000/users/${this.user.id}`, {
                 method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(userData)
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(newUserData)
             });
-            if (!response.ok) throw new Error('Failed to update user data');
+            if (!res.ok) throw new Error('Failed to update user');
+        },
+
+        async getWishlist() {
+            await this.fetchUserData();
+            return this.user.wishlist || [];
+        },
+
+        async addToWishlist(classItem) {
+            if (!this.isAuthenticated) return;
+
+            await this.fetchUserData();
+
+            if (!classItem.id) {
+                classItem.id = `${classItem.className}-${classItem.trainer}-${Date.now()}`;
+            }
+
+            const exists = this.user.wishlist.some(item =>
+                item.className === classItem.className && item.trainer === classItem.trainer
+            );
+
+            if (exists) return;
+
+            this.user.wishlist = [...(this.user.wishlist || []), classItem];
+            await this.updateUserData(this.user);
+            localStorage.setItem('user', JSON.stringify(this.user));
+        },
+
+        async removeFromWishlist(itemId) {
+            if (!this.isAuthenticated) return;
+
+            await this.fetchUserData();
+
+            this.user.wishlist = (this.user.wishlist || []).filter(item => item.id !== itemId);
+            await this.updateUserData(this.user);
+            localStorage.setItem('user', JSON.stringify(this.user));
         }
     }
-})
+});

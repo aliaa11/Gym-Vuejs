@@ -1,741 +1,742 @@
 {
-    "users": [{
-            "id": "034e",
-            "firstName": "",
-            "lastName": "",
-            "email": "",
-            "mobile": "",
-            "password": "",
-            "wishlist": []
+  "users": [
+    {
+      "id": "034e",
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "mobile": "",
+      "password": "",
+      "wishlist": []
+    },
+    {
+      "id": "755f",
+      "firstName": "Aliaa",
+      "lastName": "Drdir",
+      "email": "aliaaalihesh3@gmail.com",
+      "mobile": "01069730946",
+      "password": "aliaa123",
+      "wishlist": [
+        {
+          "className": "Running",
+          "trainer": "Randy Rivera",
+          "image": "/img/classes/classes-1.jpg",
+          "id": "Running-Randy Rivera-1745019282895"
         },
         {
-            "id": "755f",
-            "firstName": "Aliaa",
-            "lastName": "Drdir",
-            "email": "aliaaalihesh3@gmail.com",
-            "mobile": "01069730946",
-            "password": "aliaa123",
-            "wishlist": [{
-                    "className": "Running",
-                    "trainer": "Randy Rivera",
-                    "image": "/img/classes/classes-1.jpg",
-                    "id": "Running-Randy Rivera-1745019282895"
-                },
-                {
-                    "className": "Personal",
-                    "trainer": "Cole Robertson",
-                    "image": "/img/classes/classes-7.jpg",
-                    "id": "Personal-Cole Robertson-1745019283660"
-                },
-                {
-                    "className": "Dance",
-                    "trainer": "Ryan Scott",
-                    "image": "/img/classes/classes-2.jpg",
-                    "id": "Dance-Ryan Scott-1745019288252"
-                }
-            ]
-        },
-
-        {
-            "id": "ae9e",
-            "firstName": "Aliaa",
-            "lastName": "Drdir",
-            "email": "aliaaalihesh1@gmail.com",
-            "mobile": "01069730946",
-            "password": "aliaa123",
-            "wishlist": [{
-                    "className": "Running",
-                    "trainer": "Randy Rivera",
-                    "image": "/img/classes/classes-1.jpg",
-                    "id": "Running-Randy Rivera-1745019260164"
-                },
-                {
-                    "className": "Personal",
-                    "trainer": "Cole Robertson",
-                    "image": "/img/classes/classes-7.jpg",
-                    "id": "Personal-Cole Robertson-1745019261123"
-                },
-                {
-                    "className": "Dance",
-                    "trainer": "Ryan Scott",
-                    "image": "/img/classes/classes-2.jpg",
-                    "id": "Dance-Ryan Scott-1745019448455"
-                }
-            ]
+          "className": "Personal",
+          "trainer": "Cole Robertson",
+          "image": "/img/classes/classes-7.jpg",
+          "id": "Personal-Cole Robertson-1745019283660"
         },
         {
-            "id": "a238",
-            "firstName": "Mostafa",
-            "lastName": "Moknaa",
-            "email": "mostafamokna78@gmail.com",
-            "mobile": "01060495817",
-            "password": "123456789",
-            "wishlist": [{
-                    "className": "Personal",
-                    "trainer": "Cole Robertson",
-                    "image": "/img/classes/classes-7.jpg",
-                    "id": "Personal-Cole Robertson-1745061560060"
-                },
-                {
-                    "className": "Running",
-                    "trainer": "Randy Rivera",
-                    "image": "/img/classes/classes-1.jpg",
-                    "id": "Running-Randy Rivera-1745061565223"
-                },
-                {
-                    "className": "Dance",
-                    "trainer": "Ryan Scott",
-                    "image": "/img/classes/classes-2.jpg",
-                    "id": "Dance-Ryan Scott-1745061567663"
-                },
-                {
-                    "className": "Personal Training",
-                    "trainer": "Robertson",
-                    "image": "/img/classes/classes-8.jpg",
-                    "id": "Personal Training-Robertson-1745072008494"
-                }
-            ]
-        },
-
-        {
-            "id": "e5b2",
-            "firstName": "moknaa",
-            "lastName": "moknaa",
-            "email": "moknaa1@gmail.com",
-            "mobile": "01060495817",
-            "password": "12345",
-            "wishlist": [{
-                    "className": "Running",
-                    "trainer": "Randy Rivera",
-                    "image": "/img/classes/classes-1.jpg",
-                    "id": "Running-Randy Rivera-1745072237302"
-                },
-                {
-                    "className": "Personal",
-                    "trainer": "Cole Robertson",
-                    "image": "/img/classes/classes-7.jpg",
-                    "id": "Personal-Cole Robertson-1745072239804"
-                },
-                {
-                    "className": "Personal Training",
-                    "trainer": "Robertson",
-                    "image": "/img/classes/classes-8.jpg",
-                    "id": "Personal Training-Robertson-1745072241400"
-                }
-            ]
+          "className": "Dance",
+          "trainer": "Ryan Scott",
+          "image": "/img/classes/classes-2.jpg",
+          "id": "Dance-Ryan Scott-1745019288252"
         }
-    ],
-    "homePage": {
-        "header": {
-            "logo": "/img/logo.png"
+      ]
+    },
+    {
+      "id": "ae9e",
+      "firstName": "Aliaa",
+      "lastName": "Drdir",
+      "email": "aliaaalihesh1@gmail.com",
+      "mobile": "01069730946",
+      "password": "aliaa123",
+      "wishlist": [
+        {
+          "className": "Running",
+          "trainer": "Randy Rivera",
+          "image": "/img/classes/classes-1.jpg",
+          "id": "Running-Randy Rivera-1745019260164"
         },
-        "heroSection": {
-            "title": "FITNESS ELEMENTS",
-            "backgroundImage": "/img/hero-bg.jpg",
-            "features": [{
-                "title": "BMI CALCULATOR",
-                "description": "Gutlin comes packed with the user-friendly BMI Calculator alongside which lists."
-            }]
+        {
+          "className": "Personal",
+          "trainer": "Cole Robertson",
+          "image": "/img/classes/classes-7.jpg",
+          "id": "Personal-Cole Robertson-1745019261123"
         },
-        "BlogSection": {
-            "title": "BLOG",
-            "backgroundImage": "/img/hero-bg.jpg"
-        },
-        "aboutUs": {
-            "title": "STORY ABOUT US",
-            "content": [
-                "Lorem ipsum profis gravida nibh vel velit, auctor aliquet. Aenean pretium sollicitudin, nonacuit ausi elit consequat i psutasem niais sed odio sit amet nibh vulputate cursus a amet.",
-                "Etiom rhoncus. Macedona tempus, tellus eget condimentum rhoncus, gravida quam semper libero sit amet. Etiom rhoncus. Macedona tempus, tellus eget condimentum rhoncus, gravida quam semper libero sit amet."
-            ],
-            "signature": "Rocci Muro",
-            "video": {
-                "thumbnail": "/img/about-pic.jpg"
-            }
-        },
-        "services": [{
-                "image": "/img/services/service-pic.jpg"
-            },
-            {
-                "title": "Strategies",
-                "description": "Aenean massa Cum socia Thame et netoque parcellous et magnis dis port urient montes.",
-                "icon": "fas fa-chess"
-            },
-            {
-                "title": "Workout",
-                "description": "Aenean massa Cum socia Thame et netoque parcellous et magnis dis port urient montes.",
-                "icon": "fas fa-dumbbell"
-            },
-            {
-                "title": "Yoga",
-                "description": "Aenean massa Cum socia Thame et netoque parcellous et magnis dis port urient montes.",
-                "icon": "fas fa-spa"
-            },
-            {
-                "title": "Weight Loss",
-                "description": "Aenean massa Cum socia Thame et netoque parcellous et magnis dis port urient montes.",
-                "icon": "fas fa-weight"
-            }
-        ],
-        "classes": [{
-                "className": "Running",
-                "trainer": "Randy Rivera",
-                "image": "/img/classes/classes-1.jpg"
-            },
-            {
-                "className": "Personal",
-                "trainer": "Cole Robertson",
-                "image": "/img/classes/classes-7.jpg"
-            },
-            {
-                "className": "Personal Training",
-                "trainer": "Robertson",
-                "image": "/img/classes/classes-8.jpg"
-            },
-            {
-                "className": "Dance",
-                "trainer": "Ryan Scott",
-                "image": "/img/classes/classes-2.jpg"
-            },
-            {
-                "className": "Weight Loss",
-                "trainer": "Cole Robertson",
-                "image": "/img/classes/classes-6.jpg"
-            },
-            {
-                "className": "Weight Loss",
-                "trainer": "Ryan Scott",
-                "image": "/img/classes/classes-5.jpg"
-            },
-            {
-                "className": "Yoga",
-                "trainer": "Maria Garcia",
-                "image": "/img/classes/classes-9.jpg"
-            },
-            {
-                "className": "Boxing",
-                "trainer": "Mike Johnson",
-                "image": "/img/classes/classes-4.jpg"
-            },
-            {
-                "className": "Karatee",
-                "trainer": "Mike Johnson",
-                "image": "/img/classes/classes-3.jpg"
-            },
-            {
-                "className": "Karate",
-                "trainer": "Mike Johnson",
-                "image": "/img/classes/classes-3.jpg"
-            },
-            {
-                "className": "Dance",
-                "trainer": "Ryan Scott",
-                "image": "/img/classes/classes-2.jpg"
-            },
-            {
-                "className": "Weight Loss",
-                "trainer": "Cole Robertson",
-                "image": "/img/classes/classes-6.jpg"
-            }
-        ],
-        "trainers": [{
-                "name": "Gregory Powers",
-                "title": "Gym Coach",
-                "bio": "Non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam",
-                "specialty": "Strength Training",
-                "image": "/img/trainer/trainer-1.jpg"
-            },
-            {
-                "name": "Patrick Cortez",
-                "title": "Fitness Expert",
-                "bio": "Tempor incidunt ut labore et dolore magnam aliquam quaerat voluptatem",
-                "specialty": "Weight Loss",
-                "image": "/img/trainer/trainer-3.jpg"
-            },
-            {
-                "name": "Walter Wagner",
-                "title": "Professional Trainer",
-                "bio": "Quaerat voluptatem sequi nesciunt neque porro quisquam est",
-                "specialty": "CrossFit",
-                "image": "/img/trainer/trainer-2.jpg"
-            }
-        ],
-        "testimonial": [{
-                "quote": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                "name": "Patrick Cortez",
-                "title": "Leader",
-                "image": "/img/testimonial/testimonial-1.jpg"
-            },
-            {
-                "quote": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                "name": "Patrick Cortez",
-                "title": "Leader",
-                "image": "/img/trainer/trainer-3.jpg"
-            }
-        ],
-        "getTrainingToday": {
-            "title": "GET TRAINING TODAY",
-            "subtitle": "Simply dummy text of the printing and typesetting industry.",
-            "description": "Lorem Ipsum has been the industry's standard.",
-            "buttonText": "Contact Now",
-            "backgroundImage": "/img/banner-bg.jpg",
-            "personImage": "/img/banner-person.png"
-        },
-        "membershipPlans": [{
-                "name": "BASIC",
-                "price": "20",
-                "duration": "1 month",
-                "classes": "3",
-                "visits": "Unlimited"
-            },
-            {
-                "name": "STANDARD",
-                "price": "60",
-                "duration": "1 month",
-                "classes": "6",
-                "visits": "Unlimited"
-            },
-            {
-                "name": "PREMIUM",
-                "price": "100",
-                "duration": "1 month",
-                "classes": "8",
-                "visits": "Unlimited"
-            }
-        ],
-        "register": {
-            "image": "/img/register.jpg"
-        },
-        "blog": [{
-                "date": "April 17, 2025",
-                "title": "#Gym",
-                "content": "Russia's first male synchronised swimmer.",
-                "image": "/img/blog/blog-1.jpg"
-            },
-            {
-                "date": "April 17, 2025",
-                "title": "#Sport",
-                "content": "NYC measles vaccination order prevails in court.",
-                "image": "/img/blog/blog-2.jpg"
-            },
-            {
-                "date": "April 17, 2025",
-                "title": "#Body",
-                "content": "The Week in Pictures: April 11 - 18.",
-                "image": "/img/blog/blog-3.jpg"
-            },
-            {
-                "date": "April 17, 2025",
-                "title": "#Gym",
-                "content": "10 States At Risk of Rural Hospital Closures.",
-                "image": "/img/blog/blog-4.jpg"
-            }
-        ],
-        "login": {
-            "image": "/img/register.jpg"
+        {
+          "className": "Dance",
+          "trainer": "Ryan Scott",
+          "image": "/img/classes/classes-2.jpg",
+          "id": "Dance-Ryan Scott-1745019448455"
         }
+      ]
+    },
+    {
+      "id": "a238",
+      "firstName": "Mostafa",
+      "lastName": "Moknaa",
+      "email": "mostafamokna78@gmail.com",
+      "mobile": "01060495817",
+      "password": "123456789",
+      "wishlist": [
+        {
+          "className": "Running",
+          "trainer": "Randy Rivera",
+          "image": "/img/classes/classes-1.jpg",
+          "id": "Running-Randy Rivera-1745095695173"
+        }
+      ]
+    },
+    {
+      "id": "e5b2",
+      "firstName": "moknaa",
+      "lastName": "moknaa",
+      "email": "moknaa1@gmail.com",
+      "mobile": "01060495817",
+      "password": "12345",
+      "wishlist": []
+    },
+    {
+      "id": "f5fa",
+      "firstName": "Marwan",
+      "lastName": "Moknaa",
+      "email": "marwan@gmail.com",
+      "mobile": "01060495817",
+      "password": "@Ali12345",
+      "wishlist": [
+        {
+          "className": "Running",
+          "trainer": "Randy Rivera",
+          "image": "/img/classes/classes-1.jpg",
+          "id": "Running-Randy Rivera-1745098173871"
+        },
+        {
+          "className": "Personal Training",
+          "trainer": "Robertson",
+          "image": "/img/classes/classes-8.jpg",
+          "id": "Personal Training-Robertson-1745098177679"
+        }
+      ]
+    }
+  ],
+  "homePage": {
+    "header": {
+      "logo": "/img/logo.png"
     },
     "heroSection": {
-        "title": "ABOUT",
-        "backgroundImage": "img/hero-bg.jpg"
+      "title": "FITNESS ELEMENTS",
+      "backgroundImage": "/img/hero-bg.jpg",
+      "features": [
+        {
+          "title": "BMI CALCULATOR",
+          "description": "Gutlin comes packed with the user-friendly BMI Calculator alongside which lists."
+        }
+      ]
     },
-    "story": {
-        "heading": "STORY ABOUT US",
-        "description": "Lorem ipsum proin gravida nibh vel velit auctor aliquet...",
-        "image": "img/hero-bg.jpg"
+    "BlogSection": {
+      "title": "BLOG",
+      "backgroundImage": "/img/hero-bg.jpg"
     },
-    "blog": [{
-            "date": "April 17, 2025",
-            "title": "#Gym",
-            "content": "Russia's first male synchronised swimmer.",
-            "image": "/img/blog/blog-1.jpg",
-            "id": "c491"
-        },
-        {
-            "date": "April 17, 2025",
-            "title": "#Sport",
-            "content": "NYC measles vaccination order prevails in court.",
-            "image": "/img/blog/blog-2.jpg",
-            "id": "fa4e"
-        },
-        {
-            "date": "April 17, 2025",
-            "title": "#Body",
-            "content": "The Week in Pictures: April 11 - 18.",
-            "image": "/img/blog/blog-3.jpg",
-            "id": "7748"
-        },
-        {
-            "date": "April 17, 2025",
-            "title": "#Gym",
-            "content": "10 States At Risk of Rural Hospital Closures.",
-            "image": "/img/blog/blog-4.jpg",
-            "id": "620a"
-        },
-        {
-            "date": "April 17, 2025",
-            "title": "#Sport",
-            "content": "Diver who helped save Thai soccer team.",
-            "image": "/img/blog/blog-5.jpg",
-            "id": "ec2c"
-        },
-        {
-            "date": "April 17, 2025",
-            "title": "#Body",
-            "content": "Man gets life in prison for stabbing",
-            "image": "/img/blog/blog-6.jpg",
-            "id": "c63e"
-        },
-        {
-            "date": "April 17, 2025",
-            "title": "#Gym",
-            "content": "Man who pretended to be faces new charges.",
-            "image": "/img/blog/blog-7.jpg",
-            "id": "d859"
-        },
-        {
-            "date": "April 17, 2025",
-            "title": "#Sport",
-            "content": "10 States At Risk of Rural Hospital Closures.",
-            "image": "/img/blog/blog-8.jpg",
-            "id": "fecb"
-        },
-        {
-            "date": "April 17, 2025",
-            "title": "#Body",
-            "content": "Lenny Kravitz gives Arch Digest a look inside",
-            "image": "/img/blog/blog-9.jpg",
-            "id": "70e3"
-        }
+    "aboutUs": {
+      "title": "STORY ABOUT US",
+      "content": [
+        "Lorem ipsum profis gravida nibh vel velit, auctor aliquet. Aenean pretium sollicitudin, nonacuit ausi elit consequat i psutasem niais sed odio sit amet nibh vulputate cursus a amet.",
+        "Etiom rhoncus. Macedona tempus, tellus eget condimentum rhoncus, gravida quam semper libero sit amet. Etiom rhoncus. Macedona tempus, tellus eget condimentum rhoncus, gravida quam semper libero sit amet."
+      ],
+      "signature": "Rocci Muro",
+      "video": {
+        "thumbnail": "/img/about-pic.jpg"
+      }
+    },
+    "services": [
+      {
+        "image": "/img/services/service-pic.jpg"
+      },
+      {
+        "title": "Strategies",
+        "description": "Aenean massa Cum socia Thame et netoque parcellous et magnis dis port urient montes.",
+        "icon": "fas fa-chess"
+      },
+      {
+        "title": "Workout",
+        "description": "Aenean massa Cum socia Thame et netoque parcellous et magnis dis port urient montes.",
+        "icon": "fas fa-dumbbell"
+      },
+      {
+        "title": "Yoga",
+        "description": "Aenean massa Cum socia Thame et netoque parcellous et magnis dis port urient montes.",
+        "icon": "fas fa-spa"
+      },
+      {
+        "title": "Weight Loss",
+        "description": "Aenean massa Cum socia Thame et netoque parcellous et magnis dis port urient montes.",
+        "icon": "fas fa-weight"
+      }
     ],
-    "Schedule": [{
-            "day": "TUESDAY",
-            "startTime": "10.00",
-            "endTime": "11.00",
-            "type": "GYM",
-            "trainer": "John Smith",
-            "timeSlot": "10.00",
-            "id": "54e6"
-        },
-        {
-            "day": "THURSDAY",
-            "startTime": "10.00",
-            "endTime": "12.00",
-            "type": "YOGA",
-            "trainer": "John Smith",
-            "timeSlot": "10.00",
-            "id": "79f2"
-        },
-        {
-            "day": "FRIDAY",
-            "startTime": "10.00",
-            "endTime": "12.00",
-            "type": "BODY",
-            "trainer": "John Smith",
-            "timeSlot": "10.00",
-            "id": "a16b"
-        },
-        {
-            "day": "SUNDAY",
-            "startTime": "10.00",
-            "endTime": "11.00",
-            "type": "CARDIO",
-            "trainer": "John Smith",
-            "timeSlot": "10.00",
-            "id": "2f2b"
-        },
-        {
-            "day": "WEDNESDAY",
-            "startTime": "14.00",
-            "endTime": "16.00",
-            "type": "RUNNING",
-            "trainer": "John Smith",
-            "timeSlot": "14.00",
-            "id": "3594"
-        },
-        {
-            "day": "THURSDAY",
-            "startTime": "14.00",
-            "endTime": "15.00",
-            "type": "BOX",
-            "trainer": "John Smith",
-            "timeSlot": "14.00",
-            "id": "173c"
-        },
-        {
-            "day": "SATURDAY",
-            "startTime": "14.00",
-            "endTime": "16.00",
-            "type": "GYM",
-            "trainer": "John Smith",
-            "timeSlot": "14.00",
-            "id": "0263"
-        },
-        {
-            "day": "MONDAY",
-            "startTime": "16.00",
-            "endTime": "18.00",
-            "type": "CARDIO",
-            "trainer": "John Smith",
-            "timeSlot": "16.00",
-            "id": "18be"
-        },
-        {
-            "day": "THURSDAY",
-            "startTime": "16.00",
-            "endTime": "19.00",
-            "type": "GYM",
-            "trainer": "John Smith",
-            "timeSlot": "16.00",
-            "id": "a545"
-        },
-        {
-            "day": "FRIDAY",
-            "startTime": "16.00",
-            "endTime": "18.00",
-            "type": "YOGA",
-            "trainer": "John Smith",
-            "timeSlot": "16.00",
-            "id": "f401"
-        },
-        {
-            "day": "SUNDAY",
-            "startTime": "16.00",
-            "endTime": "20.00",
-            "type": "GYM",
-            "trainer": "John Smith",
-            "timeSlot": "16.00",
-            "id": "d08e"
-        },
-        {
-            "day": "MONDAY",
-            "startTime": "18.00",
-            "endTime": "22.00",
-            "type": "BOX",
-            "trainer": "John Smith",
-            "timeSlot": "18.00",
-            "id": "e687"
-        },
-        {
-            "day": "WEDNESDAY",
-            "startTime": "18.00",
-            "endTime": "20.00",
-            "type": "BODY",
-            "trainer": "John Smith",
-            "timeSlot": "18.00",
-            "id": "f3b2"
-        },
-        {
-            "day": "THURSDAY",
-            "startTime": "18.00",
-            "endTime": "21.00",
-            "type": "CROSSFIT",
-            "trainer": "John Smith",
-            "timeSlot": "18.00",
-            "id": "11a2"
-        },
-        {
-            "day": "SATURDAY",
-            "startTime": "18.00",
-            "endTime": "22.00",
-            "type": "CARDIO",
-            "trainer": "John Smith",
-            "timeSlot": "18.00",
-            "id": "4bb5"
-        },
-        {
-            "day": "WEDNESDAY",
-            "startTime": "20.00",
-            "endTime": "22.00",
-            "type": "GYM",
-            "trainer": "John Smith",
-            "timeSlot": "20.00",
-            "id": "4079"
-        },
-        {
-            "day": "THURSDAY",
-            "startTime": "20.00",
-            "endTime": "21.00",
-            "type": "BODY",
-            "trainer": "John Smith",
-            "timeSlot": "20.00",
-            "id": "6440"
-        },
-        {
-            "day": "FRIDAY",
-            "startTime": "20.00",
-            "endTime": "22.00",
-            "type": "CARDIO",
-            "trainer": "John Smith",
-            "timeSlot": "20.00",
-            "id": "4c6c"
-        },
-        {
-            "day": "SUNDAY",
-            "startTime": "20.00",
-            "endTime": "21.00",
-            "type": "CROSSFIT",
-            "trainer": "John Smith",
-            "timeSlot": "20.00",
-            "id": "d18e"
-        }
+    "classes": [
+      {
+        "className": "Running",
+        "trainer": "Randy Rivera",
+        "image": "/img/classes/classes-1.jpg"
+      },
+      {
+        "className": "Personal",
+        "trainer": "Cole Robertson",
+        "image": "/img/classes/classes-7.jpg"
+      },
+      {
+        "className": "Personal Training",
+        "trainer": "Robertson",
+        "image": "/img/classes/classes-8.jpg"
+      },
+      {
+        "className": "Dance",
+        "trainer": "Ryan Scott",
+        "image": "/img/classes/classes-2.jpg"
+      },
+      {
+        "className": "Weight Loss",
+        "trainer": "Cole Robertson",
+        "image": "/img/classes/classes-6.jpg"
+      },
+      {
+        "className": "Weight Loss",
+        "trainer": "Ryan Scott",
+        "image": "/img/classes/classes-5.jpg"
+      },
+      {
+        "className": "Yoga",
+        "trainer": "Maria Garcia",
+        "image": "/img/classes/classes-9.jpg"
+      },
+      {
+        "className": "Boxing",
+        "trainer": "Mike Johnson",
+        "image": "/img/classes/classes-4.jpg"
+      },
+      {
+        "className": "Karatee",
+        "trainer": "Mike Johnson",
+        "image": "/img/classes/classes-3.jpg"
+      },
+      {
+        "className": "Karate",
+        "trainer": "Mike Johnson",
+        "image": "/img/classes/classes-3.jpg"
+      },
+      {
+        "className": "Dance",
+        "trainer": "Ryan Scott",
+        "image": "/img/classes/classes-2.jpg"
+      },
+      {
+        "className": "Weight Loss",
+        "trainer": "Cole Robertson",
+        "image": "/img/classes/classes-6.jpg"
+      }
     ],
-    "checkout-sessions": [{
-            "id": "session_1745068688011",
-            "planId": "premium",
-            "planName": "PREMIUM",
-            "price": 10000,
-            "status": "completed",
-            "createdAt": "2025-04-19T13:18:08.011Z",
-            "customer": {
-                "name": "Mostafa Moknaa",
-                "email": "mostafamokna78@gmail.com"
-            }
-        },
-        {
-            "id": "session_1745068721958",
-            "planId": "basic",
-            "planName": "BASIC",
-            "price": 2000,
-            "status": "completed",
-            "createdAt": "2025-04-19T13:18:41.958Z",
-            "customer": {
-                "name": "Mostafa Moknaa",
-                "email": "mostafamokna78@gmail.com"
-            }
-        },
-        {
-            "id": "session_1745070366865",
-            "planId": "premium",
-            "planName": "PREMIUM",
-            "price": 10000,
-            "status": "completed",
-            "createdAt": "2025-04-19T13:46:06.865Z",
-            "customer": {
-                "name": "Mostafa Moknaa",
-                "email": "mostafamokna78@gmail.com"
-            }
-        },
-        {
-            "id": "session_1745072021739",
-            "planId": "premium",
-            "planName": "PREMIUM",
-            "price": 10000,
-            "status": "completed",
-            "createdAt": "2025-04-19T14:13:41.739Z",
-            "customer": {
-                "name": "Mostafa Moknaa",
-                "email": "mostafamokna78@gmail.com"
-            }
-        },
-        {
-            "id": "session_1745072068266",
-            "planId": "standard",
-            "planName": "STANDARD",
-            "price": 6000,
-            "status": "completed",
-            "createdAt": "2025-04-19T14:14:28.266Z",
-            "customer": {
-                "name": "Mostafa Moknaa",
-                "email": "mostafamokna78@gmail.com"
-            }
-        }
+    "trainers": [
+      {
+        "name": "Gregory Powers",
+        "title": "Gym Coach",
+        "bio": "Non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam",
+        "specialty": "Strength Training",
+        "image": "/img/trainer/trainer-1.jpg"
+      },
+      {
+        "name": "Patrick Cortez",
+        "title": "Fitness Expert",
+        "bio": "Tempor incidunt ut labore et dolore magnam aliquam quaerat voluptatem",
+        "specialty": "Weight Loss",
+        "image": "/img/trainer/trainer-3.jpg"
+      },
+      {
+        "name": "Walter Wagner",
+        "title": "Professional Trainer",
+        "bio": "Quaerat voluptatem sequi nesciunt neque porro quisquam est",
+        "specialty": "CrossFit",
+        "image": "/img/trainer/trainer-2.jpg"
+      }
     ],
-    "subscriptions": [],
-    "gallery": [{
-            "id": "1",
-            "src": "https://themewagon.github.io/gutim/img/gallery/gallery-1.jpg",
-            "alt": "Woman lifting dumbbell",
-            "categories": [
-                "all",
-                "fitness"
-            ],
-            "size": "large"
-        },
-        {
-            "id": "2",
-            "src": "https://themewagon.github.io/gutim/img/gallery/gallery-2.jpg",
-            "alt": "Person climbing stairs",
-            "categories": [
-                "all",
-                "fitness",
-                "coaching"
-            ],
-            "size": "medium"
-        },
-        {
-            "id": "3",
-            "src": "https://themewagon.github.io/gutim/img/gallery/gallery-3.jpg",
-            "alt": "Green weight plate",
-            "categories": [
-                "all",
-                "fitness"
-            ],
-            "size": "medium"
-        },
-        {
-            "id": "4",
-            "src": "https://themewagon.github.io/gutim/img/gallery/gallery-4.jpg",
-            "alt": "Person deadlifting",
-            "categories": [
-                "all",
-                "coaching"
-            ],
-            "size": "medium"
-        },
-        {
-            "id": "5",
-            "src": "https://themewagon.github.io/gutim/img/gallery/gallery-5.jpg",
-            "alt": "Woman stretching",
-            "categories": [
-                "all",
-                "fitness"
-            ],
-            "size": "medium"
-        },
-        {
-            "id": "6",
-            "src": "https://themewagon.github.io/gutim/img/gallery/gallery-6.jpg",
-            "alt": "Woman with dumbbells",
-            "categories": [
-                "all",
-                "coaching"
-            ],
-            "size": "medium"
-        },
-        {
-            "id": "7",
-            "src": "https://themewagon.github.io/gutim/img/gallery/gallery-7.jpg",
-            "alt": "Person doing pull-ups",
-            "categories": [
-                "all",
-                "event"
-            ],
-            "size": "medium"
-        }
+    "testimonial": [
+      {
+        "quote": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "name": "Patrick Cortez",
+        "title": "Leader",
+        "image": "/img/testimonial/testimonial-1.jpg"
+      },
+      {
+        "quote": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "name": "Patrick Cortez",
+        "title": "Leader",
+        "image": "/img/trainer/trainer-3.jpg"
+      }
     ],
-    "messages": [{
-            "id": "ead9",
-            "name": "h",
-            "email": "heba@gmail.com",
-            "message": "hhhhhhhhhhhhhhh"
-        },
-        {
-            "id": "7ff9",
-            "name": "hhh",
-            "email": "hhhh@gmail.com",
-            "message": "gggg"
-        },
-        {
-            "id": "6bc3",
-            "name": "aliaa",
-            "email": "aliaaalihesh@gmail.com",
-            "message": "aaaaaa"
-        },
-        {
-            "id": "0790",
-            "name": "mostafa",
-            "email": "mostafamokna78@gmail.com",
-            "message": "got work"
-        }
-    ]
+    "getTrainingToday": {
+      "title": "GET TRAINING TODAY",
+      "subtitle": "Simply dummy text of the printing and typesetting industry.",
+      "description": "Lorem Ipsum has been the industry's standard.",
+      "buttonText": "Contact Now",
+      "backgroundImage": "/img/banner-bg.jpg",
+      "personImage": "/img/banner-person.png"
+    },
+    "membershipPlans": [
+      {
+        "name": "BASIC",
+        "price": "20",
+        "duration": "1 month",
+        "classes": "3",
+        "visits": "Unlimited"
+      },
+      {
+        "name": "STANDARD",
+        "price": "60",
+        "duration": "1 month",
+        "classes": "6",
+        "visits": "Unlimited"
+      },
+      {
+        "name": "PREMIUM",
+        "price": "100",
+        "duration": "1 month",
+        "classes": "8",
+        "visits": "Unlimited"
+      }
+    ],
+    "register": {
+      "image": "/img/register.jpg"
+    },
+    "blog": [
+      {
+        "date": "April 17, 2025",
+        "title": "#Gym",
+        "content": "Russia's first male synchronised swimmer.",
+        "image": "/img/blog/blog-1.jpg"
+      },
+      {
+        "date": "April 17, 2025",
+        "title": "#Sport",
+        "content": "NYC measles vaccination order prevails in court.",
+        "image": "/img/blog/blog-2.jpg"
+      },
+      {
+        "date": "April 17, 2025",
+        "title": "#Body",
+        "content": "The Week in Pictures: April 11 - 18.",
+        "image": "/img/blog/blog-3.jpg"
+      },
+      {
+        "date": "April 17, 2025",
+        "title": "#Gym",
+        "content": "10 States At Risk of Rural Hospital Closures.",
+        "image": "/img/blog/blog-4.jpg"
+      }
+    ],
+    "login": {
+      "image": "/img/register.jpg"
+    }
+  },
+  "heroSection": {
+    "title": "ABOUT",
+    "backgroundImage": "img/hero-bg.jpg"
+  },
+  "story": {
+    "heading": "STORY ABOUT US",
+    "description": "Lorem ipsum proin gravida nibh vel velit auctor aliquet...",
+    "image": "img/hero-bg.jpg"
+  },
+  "blog": [
+    {
+      "date": "April 17, 2025",
+      "title": "#Gym",
+      "content": "Russia's first male synchronised swimmer.",
+      "image": "/img/blog/blog-1.jpg",
+      "id": "c491"
+    },
+    {
+      "date": "April 17, 2025",
+      "title": "#Sport",
+      "content": "NYC measles vaccination order prevails in court.",
+      "image": "/img/blog/blog-2.jpg",
+      "id": "fa4e"
+    },
+    {
+      "date": "April 17, 2025",
+      "title": "#Body",
+      "content": "The Week in Pictures: April 11 - 18.",
+      "image": "/img/blog/blog-3.jpg",
+      "id": "7748"
+    },
+    {
+      "date": "April 17, 2025",
+      "title": "#Gym",
+      "content": "10 States At Risk of Rural Hospital Closures.",
+      "image": "/img/blog/blog-4.jpg",
+      "id": "620a"
+    },
+    {
+      "date": "April 17, 2025",
+      "title": "#Sport",
+      "content": "Diver who helped save Thai soccer team.",
+      "image": "/img/blog/blog-5.jpg",
+      "id": "ec2c"
+    },
+    {
+      "date": "April 17, 2025",
+      "title": "#Body",
+      "content": "Man gets life in prison for stabbing",
+      "image": "/img/blog/blog-6.jpg",
+      "id": "c63e"
+    },
+    {
+      "date": "April 17, 2025",
+      "title": "#Gym",
+      "content": "Man who pretended to be faces new charges.",
+      "image": "/img/blog/blog-7.jpg",
+      "id": "d859"
+    },
+    {
+      "date": "April 17, 2025",
+      "title": "#Sport",
+      "content": "10 States At Risk of Rural Hospital Closures.",
+      "image": "/img/blog/blog-8.jpg",
+      "id": "fecb"
+    },
+    {
+      "date": "April 17, 2025",
+      "title": "#Body",
+      "content": "Lenny Kravitz gives Arch Digest a look inside",
+      "image": "/img/blog/blog-9.jpg",
+      "id": "70e3"
+    }
+  ],
+  "Schedule": [
+    {
+      "day": "TUESDAY",
+      "startTime": "10.00",
+      "endTime": "11.00",
+      "type": "GYM",
+      "trainer": "John Smith",
+      "timeSlot": "10.00",
+      "id": "54e6"
+    },
+    {
+      "day": "THURSDAY",
+      "startTime": "10.00",
+      "endTime": "12.00",
+      "type": "YOGA",
+      "trainer": "John Smith",
+      "timeSlot": "10.00",
+      "id": "79f2"
+    },
+    {
+      "day": "FRIDAY",
+      "startTime": "10.00",
+      "endTime": "12.00",
+      "type": "BODY",
+      "trainer": "John Smith",
+      "timeSlot": "10.00",
+      "id": "a16b"
+    },
+    {
+      "day": "SUNDAY",
+      "startTime": "10.00",
+      "endTime": "11.00",
+      "type": "CARDIO",
+      "trainer": "John Smith",
+      "timeSlot": "10.00",
+      "id": "2f2b"
+    },
+    {
+      "day": "WEDNESDAY",
+      "startTime": "14.00",
+      "endTime": "16.00",
+      "type": "RUNNING",
+      "trainer": "John Smith",
+      "timeSlot": "14.00",
+      "id": "3594"
+    },
+    {
+      "day": "THURSDAY",
+      "startTime": "14.00",
+      "endTime": "15.00",
+      "type": "BOX",
+      "trainer": "John Smith",
+      "timeSlot": "14.00",
+      "id": "173c"
+    },
+    {
+      "day": "SATURDAY",
+      "startTime": "14.00",
+      "endTime": "16.00",
+      "type": "GYM",
+      "trainer": "John Smith",
+      "timeSlot": "14.00",
+      "id": "0263"
+    },
+    {
+      "day": "MONDAY",
+      "startTime": "16.00",
+      "endTime": "18.00",
+      "type": "CARDIO",
+      "trainer": "John Smith",
+      "timeSlot": "16.00",
+      "id": "18be"
+    },
+    {
+      "day": "THURSDAY",
+      "startTime": "16.00",
+      "endTime": "19.00",
+      "type": "GYM",
+      "trainer": "John Smith",
+      "timeSlot": "16.00",
+      "id": "a545"
+    },
+    {
+      "day": "FRIDAY",
+      "startTime": "16.00",
+      "endTime": "18.00",
+      "type": "YOGA",
+      "trainer": "John Smith",
+      "timeSlot": "16.00",
+      "id": "f401"
+    },
+    {
+      "day": "SUNDAY",
+      "startTime": "16.00",
+      "endTime": "20.00",
+      "type": "GYM",
+      "trainer": "John Smith",
+      "timeSlot": "16.00",
+      "id": "d08e"
+    },
+    {
+      "day": "MONDAY",
+      "startTime": "18.00",
+      "endTime": "22.00",
+      "type": "BOX",
+      "trainer": "John Smith",
+      "timeSlot": "18.00",
+      "id": "e687"
+    },
+    {
+      "day": "WEDNESDAY",
+      "startTime": "18.00",
+      "endTime": "20.00",
+      "type": "BODY",
+      "trainer": "John Smith",
+      "timeSlot": "18.00",
+      "id": "f3b2"
+    },
+    {
+      "day": "THURSDAY",
+      "startTime": "18.00",
+      "endTime": "21.00",
+      "type": "CROSSFIT",
+      "trainer": "John Smith",
+      "timeSlot": "18.00",
+      "id": "11a2"
+    },
+    {
+      "day": "SATURDAY",
+      "startTime": "18.00",
+      "endTime": "22.00",
+      "type": "CARDIO",
+      "trainer": "John Smith",
+      "timeSlot": "18.00",
+      "id": "4bb5"
+    },
+    {
+      "day": "WEDNESDAY",
+      "startTime": "20.00",
+      "endTime": "22.00",
+      "type": "GYM",
+      "trainer": "John Smith",
+      "timeSlot": "20.00",
+      "id": "4079"
+    },
+    {
+      "day": "THURSDAY",
+      "startTime": "20.00",
+      "endTime": "21.00",
+      "type": "BODY",
+      "trainer": "John Smith",
+      "timeSlot": "20.00",
+      "id": "6440"
+    },
+    {
+      "day": "FRIDAY",
+      "startTime": "20.00",
+      "endTime": "22.00",
+      "type": "CARDIO",
+      "trainer": "John Smith",
+      "timeSlot": "20.00",
+      "id": "4c6c"
+    },
+    {
+      "day": "SUNDAY",
+      "startTime": "20.00",
+      "endTime": "21.00",
+      "type": "CROSSFIT",
+      "trainer": "John Smith",
+      "timeSlot": "20.00",
+      "id": "d18e"
+    }
+  ],
+  "checkout-sessions": [
+    {
+      "id": "session_1745068688011",
+      "planId": "premium",
+      "planName": "PREMIUM",
+      "price": 10000,
+      "status": "completed",
+      "createdAt": "2025-04-19T13:18:08.011Z",
+      "customer": {
+        "name": "Mostafa Moknaa",
+        "email": "mostafamokna78@gmail.com"
+      }
+    },
+    {
+      "id": "session_1745068721958",
+      "planId": "basic",
+      "planName": "BASIC",
+      "price": 2000,
+      "status": "completed",
+      "createdAt": "2025-04-19T13:18:41.958Z",
+      "customer": {
+        "name": "Mostafa Moknaa",
+        "email": "mostafamokna78@gmail.com"
+      }
+    },
+    {
+      "id": "session_1745070366865",
+      "planId": "premium",
+      "planName": "PREMIUM",
+      "price": 10000,
+      "status": "completed",
+      "createdAt": "2025-04-19T13:46:06.865Z",
+      "customer": {
+        "name": "Mostafa Moknaa",
+        "email": "mostafamokna78@gmail.com"
+      }
+    },
+    {
+      "id": "session_1745072021739",
+      "planId": "premium",
+      "planName": "PREMIUM",
+      "price": 10000,
+      "status": "completed",
+      "createdAt": "2025-04-19T14:13:41.739Z",
+      "customer": {
+        "name": "Mostafa Moknaa",
+        "email": "mostafamokna78@gmail.com"
+      }
+    },
+    {
+      "id": "session_1745072068266",
+      "planId": "standard",
+      "planName": "STANDARD",
+      "price": 6000,
+      "status": "completed",
+      "createdAt": "2025-04-19T14:14:28.266Z",
+      "customer": {
+        "name": "Mostafa Moknaa",
+        "email": "mostafamokna78@gmail.com"
+      }
+    }
+  ],
+  "subscriptions": [],
+  "gallery": [
+    {
+      "id": "1",
+      "src": "https://themewagon.github.io/gutim/img/gallery/gallery-1.jpg",
+      "alt": "Woman lifting dumbbell",
+      "categories": [
+        "all",
+        "fitness"
+      ],
+      "size": "large"
+    },
+    {
+      "id": "2",
+      "src": "https://themewagon.github.io/gutim/img/gallery/gallery-2.jpg",
+      "alt": "Person climbing stairs",
+      "categories": [
+        "all",
+        "fitness",
+        "coaching"
+      ],
+      "size": "medium"
+    },
+    {
+      "id": "3",
+      "src": "https://themewagon.github.io/gutim/img/gallery/gallery-3.jpg",
+      "alt": "Green weight plate",
+      "categories": [
+        "all",
+        "fitness"
+      ],
+      "size": "medium"
+    },
+    {
+      "id": "4",
+      "src": "https://themewagon.github.io/gutim/img/gallery/gallery-4.jpg",
+      "alt": "Person deadlifting",
+      "categories": [
+        "all",
+        "coaching"
+      ],
+      "size": "medium"
+    },
+    {
+      "id": "5",
+      "src": "https://themewagon.github.io/gutim/img/gallery/gallery-5.jpg",
+      "alt": "Woman stretching",
+      "categories": [
+        "all",
+        "fitness"
+      ],
+      "size": "medium"
+    },
+    {
+      "id": "6",
+      "src": "https://themewagon.github.io/gutim/img/gallery/gallery-6.jpg",
+      "alt": "Woman with dumbbells",
+      "categories": [
+        "all",
+        "coaching"
+      ],
+      "size": "medium"
+    },
+    {
+      "id": "7",
+      "src": "https://themewagon.github.io/gutim/img/gallery/gallery-7.jpg",
+      "alt": "Person doing pull-ups",
+      "categories": [
+        "all",
+        "event"
+      ],
+      "size": "medium"
+    }
+  ],
+  "messages": [
+    {
+      "id": "ead9",
+      "name": "h",
+      "email": "heba@gmail.com",
+      "message": "hhhhhhhhhhhhhhh"
+    },
+    {
+      "id": "7ff9",
+      "name": "hhh",
+      "email": "hhhh@gmail.com",
+      "message": "gggg"
+    },
+    {
+      "id": "6bc3",
+      "name": "aliaa",
+      "email": "aliaaalihesh@gmail.com",
+      "message": "aaaaaa"
+    },
+    {
+      "id": "0790",
+      "name": "mostafa",
+      "email": "mostafamokna78@gmail.com",
+      "message": "got work"
+    }
+  ]
 }
