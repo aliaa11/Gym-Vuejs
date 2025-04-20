@@ -1,4 +1,5 @@
 <template>
+  
     <section class="classes-gallery">
       <div class="container">
         <h2 class="section-title">MY WISHLIST</h2>
@@ -63,7 +64,6 @@
   </script>
   
   <style scoped>
-  /* Reuse the same styles from ClassesGallery */
   .classes-gallery {
     padding: 80px 0;
     background-color: #f8f8f8;

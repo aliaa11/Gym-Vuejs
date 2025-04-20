@@ -6,14 +6,14 @@
       </div>
       
       <div class="video-content">
-        <div class="text-content">
-          <p v-for="(paragraph, index) in content" :key="index">{{ paragraph }}</p>
-          <div class="signature">{{ signature }}</div>
-        </div>
-        
         <div class="video-container" >
           <img :src="video.thumbnail" alt="Video thumbnail" class="video-thumbnail position-relative">
           <i class="fa-regular fa-circle-play position-absolute icon" @click="playVideo"></i>
+        </div>
+
+        <div class="text-content">
+          <p v-for="(paragraph, index) in content" :key="index">{{ paragraph }}</p>
+          <div class="signature">{{ signature }}</div>
         </div>
       </div>
       
