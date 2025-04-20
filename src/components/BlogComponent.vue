@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-container">
+  <div class="blog-container mt-5 mb-5">
     <div class="blog-grid">
       <div v-for="(post, index) in blogPosts" :key="index" class="blog-item">
         <div class="blog-image">

@@ -58,10 +58,16 @@
           "id": "Personal-Cole Robertson-1745019261123"
         },
         {
-          "className": "Dance",
+          "className": "Karate",
+          "trainer": "Mike Johnson",
+          "image": "/img/classes/classes-3.jpg",
+          "id": "Karate-Mike Johnson-1745099928798"
+        },
+        {
+          "className": "Dancee",
           "trainer": "Ryan Scott",
           "image": "/img/classes/classes-2.jpg",
-          "id": "Dance-Ryan Scott-1745019448455"
+          "id": "Dancee-Ryan Scott-1745099969568"
         }
       ]
     },
@@ -109,6 +115,44 @@
           "trainer": "Robertson",
           "image": "/img/classes/classes-8.jpg",
           "id": "Personal Training-Robertson-1745098177679"
+        }
+      ]
+    },
+    {
+      "id": "7e7d",
+      "firstName": "Aliaa",
+      "lastName": "hesham",
+      "email": "aliaa@gmail.com",
+      "mobile": "01069730946",
+      "password": "@Aliaa123",
+      "wishlist": [
+        {
+          "className": "Running",
+          "trainer": "Randy Rivera",
+          "image": "/img/classes/classes-1.jpg",
+          "id": "Running-Randy Rivera-1745100739845"
+        },
+        {
+          "className": "Personal",
+          "trainer": "Cole Robertson",
+          "image": "/img/classes/classes-7.jpg",
+          "id": "Personal-Cole Robertson-1745100740796"
+        }
+      ]
+    },
+    {
+      "id": "07fa",
+      "firstName": "Aliaa",
+      "lastName": "hesham",
+      "email": "aliaa1@gmail.com",
+      "mobile": "01069730946",
+      "password": "Aliaa123@",
+      "wishlist": [
+        {
+          "className": "Dancee",
+          "trainer": "Ryan Scott",
+          "image": "/img/classes/classes-2.jpg",
+          "id": "Dancee-Ryan Scott-1745110388480"
         }
       ]
     }
@@ -184,7 +228,7 @@
         "image": "/img/classes/classes-8.jpg"
       },
       {
-        "className": "Dance",
+        "className": "Dancee",
         "trainer": "Ryan Scott",
         "image": "/img/classes/classes-2.jpg"
       },
@@ -637,9 +681,110 @@
         "name": "Mostafa Moknaa",
         "email": "mostafamokna78@gmail.com"
       }
+    },
+    {
+      "id": "session_1745100078055",
+      "planId": "basic",
+      "planName": "BASIC",
+      "price": 2000,
+      "status": "completed",
+      "createdAt": "2025-04-19T22:01:18.055Z",
+      "customer": {
+        "name": "Aliaa Hesham",
+        "email": "aliaaalihesh1@gmail.com"
+      }
+    },
+    {
+      "id": "session_1745100315928",
+      "planId": "basic",
+      "planName": "BASIC",
+      "price": 2000,
+      "status": "completed",
+      "createdAt": "2025-04-19T22:05:15.928Z",
+      "customer": {
+        "name": "Aliaa hesham",
+        "email": "aliaaalihesh1@gmail.com"
+      }
+    },
+    {
+      "id": "session_1745100373767",
+      "planId": "standard",
+      "planName": "STANDARD",
+      "price": 6000,
+      "status": "completed",
+      "createdAt": "2025-04-19T22:06:13.767Z",
+      "customer": {
+        "name": "Aliaa Hesham Zaki Drdir",
+        "email": "aliaaalihesh1@gmail.com"
+      }
+    },
+    {
+      "id": "session_1745100803050",
+      "planId": "basic",
+      "planName": "BASIC",
+      "price": 2000,
+      "status": "completed",
+      "createdAt": "2025-04-19T22:13:23.050Z",
+      "customer": {
+        "name": "Aliaa hesham",
+        "email": "aliaa@gmail.com"
+      }
+    },
+    {
+      "id": "session_1745101372968",
+      "planId": "standard",
+      "planName": "STANDARD",
+      "price": 6000,
+      "status": "completed",
+      "createdAt": "2025-04-19T22:22:52.968Z",
+      "customer": {
+        "name": "Aliaa Hesham",
+        "email": "aliaa@gmail.com"
+      }
+    },
+    {
+      "id": "session_1745110407303",
+      "planId": "basic",
+      "planName": "BASIC",
+      "price": 2000,
+      "status": "completed",
+      "createdAt": "2025-04-20T00:53:27.303Z",
+      "customer": {
+        "name": "Aliaa hesham",
+        "email": "aliaa1@gmail.com"
+      }
     }
   ],
-  "subscriptions": [],
+  "subscriptions": [
+    {
+      "id": "sub_1745100389191",
+      "sessionId": "session_1745100373767",
+      "planName": "STANDARD",
+      "price": "60",
+      "duration": "1 month",
+      "status": "active",
+      "customer": {
+        "name": "Aliaa Hesham Zaki Drdir",
+        "email": "aliaaalihesh1@gmail.com"
+      },
+      "startDate": "2025-04-19T22:06:29.191Z",
+      "endDate": "2026-04-19T22:06:29.191Z"
+    },
+    {
+      "id": "sub_1745101389733",
+      "sessionId": "session_1745101372968",
+      "planName": "STANDARD",
+      "price": "60",
+      "duration": "1 month",
+      "status": "active",
+      "customer": {
+        "name": "Aliaa Hesham",
+        "email": "aliaa@gmail.com"
+      },
+      "startDate": "2025-04-19T22:23:09.733Z",
+      "endDate": "2026-04-19T22:23:09.733Z"
+    }
+  ],
   "gallery": [
     {
       "id": "1",
@@ -737,6 +882,18 @@
       "name": "mostafa",
       "email": "mostafamokna78@gmail.com",
       "message": "got work"
+    },
+    {
+      "id": "8516",
+      "name": "Aliaa",
+      "email": "aliaa@gmail.com",
+      "message": "Wellcome"
+    },
+    {
+      "id": "14cc",
+      "name": "ALiaa",
+      "email": "aliaa1@gmail.com",
+      "message": "Welcomeee"
     }
   ]
 }
